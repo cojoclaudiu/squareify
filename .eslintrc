@@ -1,0 +1,10 @@
+{
+  "extends": ["next", "next/core-web-vitals", "airbnb", "prettier"],
+  "rules": {
+    "react/jsx-props-no-spreading": ["error", { "custom": "ignore" }],
+    "no-console": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "no-unused-vars": "error"
+  }
+}
