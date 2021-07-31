@@ -1,7 +1,14 @@
-import '../styles/globals.css';
+import { Provider } from 'react-redux';
+import store from '../store';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+import '../styles/_globals.css';
+
+function Nextify({ Component, pageProps }) {
+  return (
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
+  );
 }
 
-export default MyApp;
+export default Nextify;
