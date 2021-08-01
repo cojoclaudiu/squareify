@@ -9,9 +9,11 @@
 }
 
 .smLftBox {
+  grid-area: 2 / 3 / 3 / 4;
   background-color: lightsalmon;
 }
 
 .smRgtBox {
+  grid-area: 2 / 4 / 3 / 5;
   background-color: lightseagreen;
 }
