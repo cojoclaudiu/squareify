@@ -1,0 +1,17 @@
+.buttonsContainer {
+  display: flex;
+  width: 100%;
+}
+
+.itemsContainer {
+  display: flex;
+}
+
+.prevButton,
+.nextButton {
+  display: flex;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  margin-right: 20px;
+}

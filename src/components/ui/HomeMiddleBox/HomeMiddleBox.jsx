@@ -1,12 +1,29 @@
+import Link from 'next/link';
 import styles from './HomeMiddleBox.module.css';
 
 export default function HomeMiddleBox() {
   return (
     <>
-      <div className={styles.mainBox}>Middle Mainbox</div>
-      <div className={styles.smLftTopBox}>left top small box</div>
-      <div className={styles.smRgtTopBox}>right top small box</div>
-      <div className={styles.btmDoubleBox}>bottom double box</div>
+      <Link href="/" passHref>
+        <a href="replace" className={styles.mainBox}>
+          <div>Middle Mainbox</div>
+        </a>
+      </Link>
+      <Link href="/" passHref>
+        <a href="replace" className={styles.smLftTopBox}>
+          <div>left top small box</div>
+        </a>
+      </Link>
+      <Link href="/" passHref>
+        <a href="replace" className={styles.smRgtTopBox}>
+          <div>right top small box</div>
+        </a>
+      </Link>
+      <Link href="/" passHref>
+        <a href="replace" className={styles.btmDoubleBox}>
+          <div>bottom double box</div>
+        </a>
+      </Link>
     </>
   );
 }
