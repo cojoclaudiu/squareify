@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { nanoid } from 'nanoid';
 import { CarouselViewContext } from '../../../context/CarouselViewContext';
+import CarouselButton from '../CarouselButton/CarouselButton';
 import Item from '../Item/Item';
 
 import styles from './CarouselItems.module.css';
@@ -25,15 +26,15 @@ export default function CarouselItems() {
   return (
     <>
       <div className={styles.buttonsContainer}>
-        {start > 0 && (
-          <button className={styles.prevButton} type="button" onClick={dispatchDecrement}>
-            Prev
-          </button>
+        {start > 0 ? (
+          <CarouselButton dispatch={dispatchDecrement} direction="Prev" />
+        ) : (
+          <CarouselButton direction="Disabled" />
         )}
-        {end < itemsData.length && (
-          <button className={styles.nextButton} type="button" onClick={dispatchIncrement}>
-            Next
-          </button>
+        {end < itemsData.length ? (
+          <CarouselButton dispatch={dispatchIncrement} direction="Next" />
+        ) : (
+          <CarouselButton direction="Disabled" />
         )}
       </div>
       <div className={styles.itemsContainer}>{itemsData.slice(start, end)}</div>
