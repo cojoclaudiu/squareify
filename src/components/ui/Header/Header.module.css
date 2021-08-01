@@ -1,0 +1,8 @@
+.headerContainer {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  background-color: lightsalmon;
+  width: var(--appWidth);
+  height: 73px;
+  margin-bottom: var(--marginNormal);
+}
