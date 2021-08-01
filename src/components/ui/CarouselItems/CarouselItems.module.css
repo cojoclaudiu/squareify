@@ -1,6 +1,12 @@
+.trendingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: var(--marginNormal);
+}
 .buttonsContainer {
   display: flex;
-  width: 100%;
 }
 
 .itemsContainer {

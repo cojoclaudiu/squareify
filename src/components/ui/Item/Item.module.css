@@ -1,8 +1,8 @@
 .itemContainer {
   display: flex;
   background-color: orangered;
-  min-width: calc((var(--appWidth) / 4 - var(--gap)) + var(--gap) / 4);
-  min-height: 290px;
+  min-width: var(--squareBox);
+  min-height: var(--squareBox);
 }
 
 .itemContainer:not(:last-child) {

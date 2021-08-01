@@ -29,23 +29,25 @@ export default function CarouselItems() {
 
   return (
     <>
-      <div className={styles.buttonsContainer}>
-        {start > 0 ? (
-          <CarouselButton dispatch={dispatchDecrement} direction="Prev" />
-        ) : (
-          <CarouselButton direction="Disabled" />
-        )}
-        {end < itemsData.length ? (
-          <CarouselButton dispatch={dispatchIncrement} direction="Next" />
-        ) : (
-          <CarouselButton direction="Disabled" />
-        )}
+      <div className={styles.trendingContainer}>
+        <h3>Trending</h3>
+        <div className={styles.buttonsContainer}>
+          {start > 0 ? (
+            <CarouselButton dispatch={dispatchDecrement} direction="Prev" />
+          ) : (
+            <CarouselButton direction="Disabled" />
+          )}
+          {end < itemsData.length ? (
+            <CarouselButton dispatch={dispatchIncrement} direction="Next" />
+          ) : (
+            <CarouselButton direction="Disabled" />
+          )}
+        </div>
       </div>
+
       <div className={styles.itemsContainer}>
         {itemsData.slice(start, end).map((item) => (
-          <>
-            <Item key={item.id} name={item.name} price={item.price} />
-          </>
+          <Item key={item.id} name={item.name} price={item.price} />
         ))}
       </div>
     </>

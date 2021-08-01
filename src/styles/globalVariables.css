@@ -2,4 +2,5 @@
   --appWidth: 1200px;
   --gap: 10px;
   --marginNormal: 10px;
+  --squareBox: calc((var(--appWidth) / 4 - var(--gap)) + var(--gap) / 4);
 }
