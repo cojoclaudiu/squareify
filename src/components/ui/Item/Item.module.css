@@ -3,6 +3,9 @@
   background-color: orangered;
   min-width: calc((var(--appWidth) / 4 - var(--gap)) + var(--gap) / 4);
   min-height: 290px;
+}
+
+.itemContainer:not(:last-child) {
   margin-right: 10px;
 }
 
