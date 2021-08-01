@@ -1,0 +1,5 @@
+.mainContent {
+  width: 100%;
+  max-width: var(--appWidth);
+  min-width: 320px;
+}

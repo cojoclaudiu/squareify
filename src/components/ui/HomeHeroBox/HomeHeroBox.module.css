@@ -1,0 +1,17 @@
+.mainBox {
+  grid-area: 1 / 1 / span 2 / span 2;
+  background-color: lightcoral;
+}
+
+.topDoubleBox {
+  grid-area: 1 / 3 / auto / -1;
+  background-color: lightgreen;
+}
+
+.smLftBox {
+  background-color: lightsalmon;
+}
+
+.smRgtBox {
+  background-color: lightseagreen;
+}

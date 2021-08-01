@@ -6,7 +6,9 @@ import '../styles/_globals.css';
 function Nextify({ Component, pageProps }) {
   return (
     <Provider store={store}>
-      <Component {...pageProps} />
+      <div className="appWrapper">
+        <Component {...pageProps} />
+      </div>
     </Provider>
   );
 }

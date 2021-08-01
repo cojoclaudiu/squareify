@@ -1,4 +1,6 @@
 .homepageContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap);
+  height: calc(var(--appWidth) / 2 - var(--gap) / 2);
 }
