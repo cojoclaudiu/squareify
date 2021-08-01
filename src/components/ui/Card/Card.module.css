@@ -1,0 +1,16 @@
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-self: center;
+  gap: 10px;
+  height: var(--squareBox);
+  width: var(--appWidth);
+  margin: var(--marginNormal) 0;
+}
+
+.cardItemLeft {
+  background-color: rosybrown;
+}
+.cardItemRight {
+  background-color: royalblue;
+}

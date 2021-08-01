@@ -23,7 +23,7 @@ export default function HomeHeroBox() {
 
       <Link href="/" passHref>
         <a href="replace" className={styles.smRgtBox}>
-          <div />
+          <div>right small box</div>
         </a>
       </Link>
     </>

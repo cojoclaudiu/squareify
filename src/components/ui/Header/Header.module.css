@@ -1,8 +1,9 @@
 .headerContainer {
   display: grid;
   grid-template-columns: 2fr 3fr 2fr;
+  justify-self: center;
+  grid-auto-flow: column;
   background-color: lightsalmon;
   width: var(--appWidth);
   height: 73px;
-  margin-bottom: var(--marginNormal);
 }

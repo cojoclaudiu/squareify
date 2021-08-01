@@ -1,3 +1,3 @@
 export default function Logo() {
-  return <div>nexity shop</div>;
+  return <h1>nextify shop</h1>;
 }

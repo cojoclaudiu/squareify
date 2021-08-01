@@ -1,5 +1,8 @@
 .mainContent {
-  width: 100%;
+  display: grid;
+  grid-auto-flow: row;
+  justify-self: center;
+  width: var(--appWidth);
   max-width: var(--appWidth);
   min-width: 320px;
 }

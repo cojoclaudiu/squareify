@@ -1,0 +1,7 @@
+.navContainer {
+  justify-self: center;
+  margin: var(--marginNormal) 0;
+  background-color: blueviolet;
+  height: 55px;
+  width: 100%;
+}
