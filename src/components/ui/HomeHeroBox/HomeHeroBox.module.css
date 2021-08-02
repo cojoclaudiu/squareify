@@ -1,31 +1,3 @@
-.mainBox {
-  grid-area: 1 / 1 / span 2 / span 2;
-  background-color: lightcoral;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.mainImage {
-  grid-area: 1 / 1 / 5 /5;
-}
-
-.mainTitleContainer {
-  grid-area: 1/1/2/5;
-  justify-content: center;
-  align-items: center;
-}
-
-.mainDescription {
-  grid-area: 2/1/3/5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 5rem;
-  color: white;
-}
-
 .topDoubleBox {
   grid-area: 1 / 3 / auto / -1;
   background-color: lightgreen;

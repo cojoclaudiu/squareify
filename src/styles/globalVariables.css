@@ -3,4 +3,13 @@
   --gap: 10px;
   --marginNormal: 10px;
   --squareBox: calc((var(--appWidth) / 4 - var(--gap)) + var(--gap) / 4);
+
+  /* Colors Homepage */
+  --navColor: var(--mainColor);
+  --mainColor: #f01e1f;
+  --secondaryColor: #fed2d1;
+
+  /* Font Sizes */
+  --mainBoxDescription: 3rem;
+  --mainBoxTitle: 6rem;
 }

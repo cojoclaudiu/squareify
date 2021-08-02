@@ -2,8 +2,9 @@
   display: grid;
   grid-template-columns: 2fr 3fr 2fr;
   justify-self: center;
+  align-content: center;
   grid-auto-flow: column;
-  background-color: lightsalmon;
   width: var(--appWidth);
-  height: 73px;
+  height: 74px;
+  /* background-color: lightsalmon; */
 }

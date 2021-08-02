@@ -1,0 +1,13 @@
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  display: flex;
+  height: 85%;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+}

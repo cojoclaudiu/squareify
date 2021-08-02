@@ -1,7 +1,7 @@
 .navContainer {
   justify-self: center;
   margin: var(--marginNormal) 0;
-  background-color: blueviolet;
+  background: var(--navColor);
   height: 55px;
   width: 100%;
 }
