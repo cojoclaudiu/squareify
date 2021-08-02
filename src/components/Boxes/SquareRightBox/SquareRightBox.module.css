@@ -1,0 +1,48 @@
+.smRgtBox {
+  grid-area: 2 / 4 / 3 / 5;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  background: var(--squareRightColor);
+  background: var(--squareRightGradient);
+}
+
+.imageContainer {
+  grid-area: 1 / 1 / 8 /8;
+}
+
+.squareTitle {
+  grid-area: 1/1/2/2;
+
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  border-radius: 2px;
+
+  font-size: 0.9rem;
+  font-weight: lighter;
+  letter-spacing: 1px;
+
+  padding: 1px 3px 0 3px;
+  background-color: rgba(224, 81, 73, 0.8);
+  color: white;
+}
+
+.squareDescription {
+  grid-area: 1/2/2/7;
+  font-weight: lighter;
+  align-self: center;
+  justify-self: center;
+  font-size: 1.2rem;
+}
+
+.squareButton {
+  grid-area: 7/3/8/6;
+  align-self: center;
+  justify-self: center;
+  background-color: rgba(224, 81, 73, 0.8);
+  color: white;
+  font-size: 1.4rem;
+  border-radius: 2px;
+  padding: 3px 12px;
+}

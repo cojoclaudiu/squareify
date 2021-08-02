@@ -1,13 +1,14 @@
-import Link from 'next/link';
 import MainBox from '../../Boxes/MainBox/MainBox';
 import DoubleBox from '../../Boxes/DoubleBox/DoubleBox';
 import SqureLeftBox from '../../Boxes/SquareLeftBox/SquareLeftBox';
-import styles from './HomeHeroBox.module.css';
+import SquareRightBox from '../../Boxes/SquareRightBox/SquareRightBox';
+// import styles from './HomeHeroBox.module.css';
 
 // Images
 import BackToSchool from '../../../../public/assets/homepage/backtoschool.png';
 import Console from '../../../../public/assets/homepage/console.png';
 import WannaPlay from '../../../../public/assets/homepage/wanna-play.png';
+import AirPodsMax from '../../../../public/assets/homepage/airpodsmax.png';
 
 export default function HomeHeroBox() {
   return (
@@ -32,11 +33,12 @@ export default function HomeHeroBox() {
         alt="Back to school Ad"
       />
 
-      <Link href="/" passHref>
-        <a href="replace" className={styles.smRgtBox}>
-          <div>right small box</div>
-        </a>
-      </Link>
+      <SquareRightBox
+        title="Ad"
+        description="see our #apple offers"
+        image={AirPodsMax}
+        alt="AirPods Max orange"
+      />
     </>
   );
 }

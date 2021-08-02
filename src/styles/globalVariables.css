@@ -7,6 +7,8 @@
   /* Colors Homepage */
   --navColor: var(--mainColor);
   --mainColor: #f01e1f;
+  --textColor: #23292e;
+
   --secondaryColor: #fed2d1;
 
   --mainBoxGradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -14,6 +16,13 @@
 
   --doubleBoxColor: #d7e1ec;
   --doubleBoxGradient: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+
+  --squareRightColor: rgb(218, 174, 173);
+  --squareRightGradient: radial-gradient(
+    circle,
+    rgba(218, 174, 173, 1) 54%,
+    rgba(175, 124, 121, 1) 84%
+  );
 
   /* Font Sizes */
   --mainBoxDescription: 3rem;
