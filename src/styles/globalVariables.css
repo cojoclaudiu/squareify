@@ -9,7 +9,16 @@
   --mainColor: #f01e1f;
   --secondaryColor: #fed2d1;
 
+  --mainBoxGradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --mainBoxColor: #667eea;
+
+  --doubleBoxColor: #d7e1ec;
+  --doubleBoxGradient: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+
   /* Font Sizes */
   --mainBoxDescription: 3rem;
   --mainBoxTitle: 6rem;
+
+  --doubleBoxTitle: 3rem;
+  --doubleBoxDescription: 1.3rem;
 }
