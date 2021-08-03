@@ -8,13 +8,13 @@
 
 .imageContainer:not(:last-child) {
   margin-right: 10px;
-  width: 29.25rem;
-  height: 29.25rem;
 }
 
 .itemImage {
   grid-area: 1/1/8/8;
   z-index: -1;
+  width: 29.25rem;
+  height: 29.25rem;
 }
 
 .itemTitle {
@@ -38,7 +38,7 @@
 
 .itemTitle,
 .itemPrice {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 132, 66, 0.9);
   color: white;
   text-align: center;
   border-radius: 2px;
