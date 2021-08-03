@@ -7,7 +7,15 @@ export default function MainBox({ image, title, description, alt }) {
     <Link href="/" passHref>
       <a href="replace" className={styles.mainBox}>
         <div className={styles.mainImage}>
-          <Image height={595} width={595} src={image} alt={alt} layout="responsive" />
+          <Image
+            width={595}
+            height={595}
+            src={image}
+            alt={alt}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+            layout="intrinsic"
+          />
         </div>
 
         <h2 className={styles.mainTitle}>{title}</h2>

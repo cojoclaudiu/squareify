@@ -9,6 +9,8 @@
 
 .mainImage {
   grid-area: 1 / 1 / 5 /5;
+  height: 59.5rem;
+  width: 59.5rem;
 }
 
 .mainTitle {

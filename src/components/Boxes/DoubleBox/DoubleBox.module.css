@@ -9,6 +9,8 @@
 
 .doubleBoxImage {
   grid-area: 1 / 1 / 4 /3;
+  width: 59.5rem;
+  height: 29.25rem;
 }
 
 .doubleBoxTitle {

@@ -5,10 +5,10 @@ import SquareRightBox from '../../Boxes/SquareRightBox/SquareRightBox';
 // import styles from './HomeHeroBox.module.css';
 
 // Images
-import BackToSchool from '../../../../public/assets/homepage/backtoschool.png';
-import Console from '../../../../public/assets/homepage/console.png';
-import WannaPlay from '../../../../public/assets/homepage/wanna-play.png';
-import AirPodsMax from '../../../../public/assets/homepage/airpodsmax.png';
+import BackToSchool from '../../../../public/images/backtoschool.png';
+import Console from '../../../../public/images/console.png';
+import WannaPlay from '../../../../public/images/wanna-play.png';
+import AirPodsMax from '../../../../public/images/airpodsmax.png';
 
 export default function HomeHeroBox() {
   return (

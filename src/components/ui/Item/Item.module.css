@@ -8,6 +8,8 @@
 
 .imageContainer:not(:last-child) {
   margin-right: 10px;
+  width: 29.25rem;
+  height: 29.25rem;
 }
 
 .itemImage {
@@ -22,7 +24,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
-  align-self: center;
+  align-self: flex-end;
   padding: 5px 0;
 }
 
