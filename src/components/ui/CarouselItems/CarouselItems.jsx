@@ -15,7 +15,7 @@ import styles from './CarouselItems.module.css';
 export default function CarouselItems() {
   const { state, dispatch } = useContext(CarouselViewContext);
   const { start, end } = state;
-  const amountOfItems = useWidth() > 1240 ? end : 3;
+  const amountOfItems = useWidth() > 1240 ? end : end - 1;
 
   const itemsData = [
     {
