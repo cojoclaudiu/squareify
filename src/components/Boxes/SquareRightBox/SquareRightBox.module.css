@@ -7,6 +7,12 @@
   background: var(--squareRightGradient);
 }
 
+@media only screen and (max-width: 1240px) {
+  .smRgtBox {
+    grid-area: 1 / 3 / 2 /4;
+  }
+}
+
 .imageContainer {
   grid-area: 1 / 1 / 8 /8;
   width: 29.25rem;

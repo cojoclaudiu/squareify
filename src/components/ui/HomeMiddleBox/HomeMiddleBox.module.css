@@ -1,4 +1,29 @@
+.sectionMiddle {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: var(--gap);
+  height: max-content;
+  width: max-content;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1240px) {
+  .sectionMiddle {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+/* TO DO */
+
 .btmDoubleBox {
   grid-area: 2 / 1 / 3 / 3;
   background-color: lightgreen;
+}
+
+@media only screen and (max-width: 1240px) {
+  .btmDoubleBox {
+    grid-area: 3 / 1 / 4/ 4;
+  }
 }

@@ -8,12 +8,14 @@ import {
 import { CarouselViewContext } from '../../../context/CarouselViewContext';
 import CarouselButton from '../CarouselButton/CarouselButton';
 import Item from '../Item/Item';
+import useWidth from '../../../hooks/useWidth';
 
 import styles from './CarouselItems.module.css';
 
 export default function CarouselItems() {
   const { state, dispatch } = useContext(CarouselViewContext);
   const { start, end } = state;
+  const amountOfItems = useWidth() > 1240 ? end : 3;
 
   const itemsData = [
     {
@@ -110,7 +112,7 @@ export default function CarouselItems() {
       </div>
 
       <div className={styles.itemsContainer}>
-        {itemsData.slice(start, end).map((item) => (
+        {itemsData.slice(start, amountOfItems).map((item) => (
           <Item
             key={item.id}
             name={item.name}

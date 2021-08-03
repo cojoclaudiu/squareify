@@ -2,7 +2,7 @@ import MainBox from '../../Boxes/MainBox/MainBox';
 import DoubleBox from '../../Boxes/DoubleBox/DoubleBox';
 import SqureLeftBox from '../../Boxes/SquareLeftBox/SquareLeftBox';
 import SquareRightBox from '../../Boxes/SquareRightBox/SquareRightBox';
-// import styles from './HomeHeroBox.module.css';
+import styles from './HomeHeroBox.module.css';
 
 // Images
 import BackToSchool from '../../../../public/images/backtoschool.png';
@@ -12,7 +12,7 @@ import AirPodsMax from '../../../../public/images/airpodsmax.png';
 
 export default function HomeHeroBox() {
   return (
-    <>
+    <section className={styles.sectionHero}>
       <MainBox
         image={BackToSchool}
         title="Are you ready?"
@@ -39,6 +39,6 @@ export default function HomeHeroBox() {
         image={AirPodsMax}
         alt="AirPods Max orange"
       />
-    </>
+    </section>
   );
 }

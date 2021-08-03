@@ -6,7 +6,7 @@
 
   /* Colors Homepage */
   --navColor: var(--mainGradient);
-  --mainGradient: linear-gradient(-90deg, #0575e6, #00f260);
+  --mainGradient: linear-gradient(-90deg, #0575e6, #764ba2);
   --mainColor: #0575e6;
   --textColor: #23292e;
 
@@ -31,4 +31,10 @@
 
   --doubleBoxTitle: 3rem;
   --doubleBoxDescription: 1.3rem;
+}
+
+@media only screen and (max-width: 1240px) {
+  :root {
+    --appWidth: 900px;
+  }
 }

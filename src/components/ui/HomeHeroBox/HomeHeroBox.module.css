@@ -1,0 +1,16 @@
+.sectionHero {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: var(--gap);
+  height: max-content;
+  width: max-content;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1240px) {
+  .sectionHero {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}

@@ -10,7 +10,7 @@ import styles from './HomeMiddleBox.module.css';
 
 export default function HomeMiddleBox() {
   return (
-    <>
+    <section className={styles.sectionMiddle}>
       <SecondaryBigBox
         title="CHANGE THE RULES OF WAR"
         image={Battlefield}
@@ -37,6 +37,6 @@ export default function HomeMiddleBox() {
           <div>bottom double box</div>
         </a>
       </Link>
-    </>
+    </section>
   );
 }

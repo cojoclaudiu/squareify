@@ -1,6 +1,9 @@
 import { createContext, useReducer } from 'react';
 
-export const CarouselViewContext = createContext({ start: 0, end: 4 });
+export const CarouselViewContext = createContext({
+  start: null,
+  end: null,
+});
 
 const carouselViewReducer = (state, action) => {
   switch (action.type) {

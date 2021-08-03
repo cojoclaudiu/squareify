@@ -3,8 +3,7 @@
   align-items: center;
   justify-items: center;
   font-size: 5rem;
-  background: -webkit-linear-gradient(360deg, #0575e6, #00f260);
+  background: -webkit-linear-gradient(360deg, #0575e6, #764ba2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* linear-gradient(to right, #0575e6, #00f260) */

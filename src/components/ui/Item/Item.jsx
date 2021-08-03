@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import priceFormat from '../../../../utils/priceFormat';
+import priceFormat from '../../../utils/priceFormat';
 import styles from './Item.module.css';
 
 export default function Item({ name, price, url = '/', image, alt }) {

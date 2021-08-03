@@ -1,4 +1,5 @@
 .carouselContainer {
   display: grid;
   grid-auto-flow: row;
+  width: max-content;
 }
