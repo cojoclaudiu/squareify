@@ -1,5 +1,10 @@
 import { useContext } from 'react';
 import { nanoid } from 'nanoid';
+import {
+  IoIosArrowDropleftCircle,
+  IoIosArrowDroprightCircle,
+  IoIosCloseCircle,
+} from 'react-icons/io';
 import { CarouselViewContext } from '../../../context/CarouselViewContext';
 import CarouselButton from '../CarouselButton/CarouselButton';
 import Item from '../Item/Item';
@@ -89,17 +94,17 @@ export default function CarouselItems() {
   return (
     <>
       <div className={styles.trendingContainer}>
-        <h3>Trending</h3>
+        <h3 className={styles.trending}>Trending</h3>
         <div className={styles.buttonsContainer}>
           {start > 0 ? (
-            <CarouselButton dispatch={dispatchDecrement} direction="Prev" />
+            <CarouselButton dispatch={dispatchDecrement} icon={<IoIosArrowDropleftCircle />} />
           ) : (
-            <CarouselButton direction="Disabled" />
+            <CarouselButton icon={<IoIosCloseCircle />} />
           )}
           {end < itemsData.length ? (
-            <CarouselButton dispatch={dispatchIncrement} direction="Next" />
+            <CarouselButton dispatch={dispatchIncrement} icon={<IoIosArrowDroprightCircle />} />
           ) : (
-            <CarouselButton direction="Disabled" />
+            <CarouselButton icon={<IoIosCloseCircle />} />
           )}
         </div>
       </div>

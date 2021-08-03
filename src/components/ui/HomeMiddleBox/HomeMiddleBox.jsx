@@ -1,19 +1,22 @@
 import Link from 'next/link';
 import SecondaryLftSuqareBox from '../../Boxes/SecondaryLftSquareBox/SecondaryLftSquareBox';
 import SecondaryRgtSquareBox from '../../Boxes/SecondaryRgtSquareBox/SecondaryRgtSquareBox';
+import SecondaryBigBox from '../../Boxes/SecondaryBigBox/SecondaryBigBox';
 
 import WashingMachine from '../../../../public/images/washing-machine-laundry.png';
 import Fridge from '../../../../public/images/fridge-freezers.png';
+import Battlefield from '../../../../public/images/battlefield-2042-banner.png';
 import styles from './HomeMiddleBox.module.css';
 
 export default function HomeMiddleBox() {
   return (
     <>
-      <Link href="/" passHref>
-        <a href="replace" className={styles.mainBox}>
-          <div>Middle Mainbox</div>
-        </a>
-      </Link>
+      <SecondaryBigBox
+        title="CHANGE THE RULES OF WAR"
+        image={Battlefield}
+        alt="Battlefield 2042 Portal"
+        button="Pre-oreder"
+      />
 
       <SecondaryLftSuqareBox
         image={WashingMachine}

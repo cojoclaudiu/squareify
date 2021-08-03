@@ -1,0 +1,39 @@
+.bigBoxContainer {
+  grid-area: 1 / 5 / span 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  background: rgb(13, 61, 65);
+  background: linear-gradient(158deg, rgba(13, 61, 65, 1) 0%, rgba(216, 45, 20, 1) 100%);
+}
+
+.boxImage {
+  grid-area: 1/1/7/7;
+}
+
+.bigBoxTitle {
+  grid-area: 1/2/2/6;
+  align-self: center;
+  justify-self: center;
+  font-size: 2.5rem;
+  background-color: rgba(144, 254, 222, 0.3);
+  padding: 5px 10px;
+  z-index: 1;
+}
+
+.button {
+  cursor: pointer;
+  grid-area: 6/1/7/3;
+  align-self: flex-end;
+  margin-bottom: 15px;
+  justify-self: center;
+
+  background-color: rgb(144, 254, 222);
+  font-weight: bold;
+  border-radius: 40px;
+  padding: 15px 20px;
+  z-index: 1;
+}
+.button:hover {
+  filter: brightness(1.1);
+}

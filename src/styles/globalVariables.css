@@ -7,6 +7,7 @@
   /* Colors Homepage */
   --navColor: var(--mainGradient);
   --mainGradient: linear-gradient(-90deg, #0575e6, #00f260);
+  --mainColor: #0575e6;
   --textColor: #23292e;
 
   --secondaryColor: #fed2d1;

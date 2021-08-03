@@ -1,13 +1,29 @@
 .inputContainer {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-self: center;
+  justify-self: center;
+  position: relative;
+  height: 46px;
+  width: 90%;
+  border: 1px solid #dee0e5;
+  border-radius: 5px;
 }
 
 .input {
-  display: flex;
-  height: 85%;
-  width: 90%;
-  align-items: center;
-  justify-content: center;
+  border-radius: 4px;
+  padding-left: 10px;
+  font-size: 1.6rem;
+  width: 84%;
+  height: 100%;
+  border: 0;
+}
+
+.searchButton {
+  background-color: #f7f9fa;
+  font-weight: lighter;
+  padding: 5px 10px;
+  height: 42px;
+  right: 2px;
+  position: absolute;
+  border-radius: 4px;
 }
