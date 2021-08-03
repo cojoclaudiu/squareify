@@ -2,10 +2,9 @@
   display: flex;
   align-items: center;
   justify-items: center;
-  background-color: var(--mainColor);
-  width: fit-content;
-  height: fit-content;
-  padding: 5px 15px;
-  border-radius: 2px;
-  color: rgba(255, 255, 255, 0.98);
+  font-size: 5rem;
+  background: -webkit-linear-gradient(360deg, #0575e6, #00f260);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+/* linear-gradient(to right, #0575e6, #00f260) */

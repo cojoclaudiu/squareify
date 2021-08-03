@@ -1,0 +1,38 @@
+.smRgtTopBox {
+  grid-area: 1 / 2 / 2 /3;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  background-color: #f2cf07;
+  background-image: linear-gradient(315deg, #f2cf07 0%, #55d284 74%);
+}
+
+.imageContainer {
+  grid-area: 1 / 1 / 8 /8;
+  width: 29.25rem;
+  height: 29.25rem;
+}
+
+.secondaryTitle {
+  grid-area: 6/1/7/8;
+  align-self: flex-end;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.secondaryDescription {
+  grid-area: 7/1/8/8;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  align-self: flex-start;
+  font-size: 1.2rem;
+}
+
+.secondaryTitle,
+.secondaryDescription {
+  background-color: rgba(85, 210, 133, 0.3);
+  text-align: center;
+  justify-self: center;
+  width: 90%;
+  z-index: 1;
+}

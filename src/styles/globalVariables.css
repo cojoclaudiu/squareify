@@ -5,8 +5,8 @@
   --squareBox: calc((var(--appWidth) / 4 - var(--gap)) + var(--gap) / 4);
 
   /* Colors Homepage */
-  --navColor: var(--mainColor);
-  --mainColor: #f01e1f;
+  --navColor: var(--mainGradient);
+  --mainGradient: linear-gradient(-90deg, #0575e6, #00f260);
   --textColor: #23292e;
 
   --secondaryColor: #fed2d1;
