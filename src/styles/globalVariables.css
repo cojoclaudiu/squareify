@@ -38,3 +38,9 @@
     --appWidth: 900px;
   }
 }
+
+@media only screen and (max-width: 920px) {
+  :root {
+    --appWidth: 600px;
+  }
+}

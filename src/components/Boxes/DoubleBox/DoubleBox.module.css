@@ -13,6 +13,12 @@
   }
 }
 
+@media only screen and (max-width: 920px) {
+  .topDoubleBox {
+    grid-area: 3 / 1 / 4 / 3;
+  }
+}
+
 .doubleBoxImage {
   grid-area: 1 / 1 / 4 /3;
   width: 59.5rem;

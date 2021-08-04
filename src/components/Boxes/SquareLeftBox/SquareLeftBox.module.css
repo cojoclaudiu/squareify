@@ -5,6 +5,12 @@
   grid-template-rows: repeat(7, 1fr);
 }
 
+@media only screen and (max-width: 920px) {
+  .smLftBox {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+}
+
 .imageContainer {
   grid-area: 1 / 1 / 8 /8;
   z-index: -1;

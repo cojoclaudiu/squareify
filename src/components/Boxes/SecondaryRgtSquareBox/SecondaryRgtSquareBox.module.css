@@ -13,6 +13,12 @@
   }
 }
 
+@media only screen and (max-width: 920px) {
+  .smRgtTopBox {
+    grid-area: 4 / 2 / 5/ 3;
+  }
+}
+
 .imageContainer {
   grid-area: 1 / 1 / 8 /8;
   width: 29.25rem;
