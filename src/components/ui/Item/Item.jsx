@@ -8,7 +8,7 @@ export default function Item({ name, price, url = '/', image, alt }) {
     <Link href={url} passHref>
       <a href="replace" className={styles.imageContainer}>
         <div className={styles.itemImage}>
-          <Image width={292} height={292} src={image} alt={alt} layout="intrinsic" />
+          <Image width={292} height={292} src={image} alt={alt} objectFit="contain" />
         </div>
         <h2 className={styles.itemTitle}>{name}</h2>
         <div className={styles.itemPrice}>{priceFormat(price)}</div>

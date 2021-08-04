@@ -2,8 +2,8 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  min-width: var(--squareBox);
-  min-height: var(--squareBox);
+  width: 29.25rem;
+  height: 29.25rem;
 }
 
 .imageContainer:not(:last-child) {

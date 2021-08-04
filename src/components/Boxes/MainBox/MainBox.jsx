@@ -14,7 +14,7 @@ export default function MainBox({ image, title, description, alt }) {
             alt={alt}
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
-            layout="intrinsic"
+            objectFit="cover"
           />
         </div>
 

@@ -7,7 +7,7 @@ export default function SquareRightBox({ title, description, image, alt }) {
     <Link href="/" passHref>
       <a href="replace" className={styles.smRgtBox}>
         <div className={styles.imageContainer}>
-          <Image width={292} height={292} src={image} alt={alt} layout="intrinsic" />
+          <Image width={292} height={292} src={image} alt={alt} objectFit="cover" />
         </div>
         <h2 className={styles.squareTitle}>{title}</h2>
         <h2 className={styles.squareDescription}>{description}</h2>

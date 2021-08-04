@@ -7,7 +7,7 @@ export default function DoubleBox({ title, description, image, alt }) {
     <Link href="/" passHref>
       <a href="replace" className={styles.topDoubleBox}>
         <div className={styles.doubleBoxImage}>
-          <Image width={595} height={292} src={image} alt={alt} layout="intrinsic" />
+          <Image width={595} height={292} src={image} alt={alt} objectFit="cover" />
         </div>
         <h2 className={styles.doubleBoxTitle}>{title}</h2>
         <h2 className={styles.doubleBoxDescription}>{description}</h2>
