@@ -1,7 +1,17 @@
 .navContainer {
+  display: grid;
   justify-self: center;
   margin-bottom: var(--marginNormal);
   background: var(--navColor);
   height: 45px;
   width: 100%;
+  color: white;
+}
+
+.linkContainer {
+  display: flex;
+  align-items: space-between;
+  justify-self: center;
+  align-self: center;
+  width: var(--appWidth);
 }

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 2850656,
+    "price": 69.99,
+    "name": "Ratchet & Clank: Rift Apart",
+    "description": "The intergalactic adventurers are back with a bang in Ratchet & Clank: Rift Apart. Help them stop a robotic emperor intent on conquering cross-dimensional worlds, with their own universe next in the firing line. Built from the ground up by acclaimed studio Insomniac Games, go above and beyond with the mind-blowing speed and immersive features of the PS5™ console. Brand-new haptic feedback and adaptive trigger technology creates astonishing physical sensations, bringing in-game actions to life in your hands via the DualSense™ wireless controller. Enjoy a visually dazzling, interdimensional adventure, complete with familiar faces and some new allies – only on the PlayStation®5 console.",
+    "category": "games",
+    "subcategory": "PlayStation",
+    "image": [],
+    "inStock": true
+  },
+
+  {
+    "id": 10200617,
+    "price": 89.99,
+    "name": " LOGITECH MX Master 3 Wireless Darkfield Mouse ",
+    "description": "Easily manage your workflow and stay in control with the Logitech MX Master 3 Wireless Darkfield Mouse. The buttons can be fully customized based on your personal preferences, with app-specific profiles to speed up your tasks. Quickly switch tools in Photoshop or open a new Word document with a click. And the ergonomic design keeps your hand comfortable all day long.",
+    "category": "computer accesories",
+    "subcategory": "mice and keyboards",
+    "image": [],
+    "inStock": true
+  }
+]

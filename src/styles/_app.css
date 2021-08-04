@@ -3,3 +3,7 @@
   grid-auto-flow: row;
   width: 100%;
 }
+
+.appWrapper > *:not(nav) {
+  margin: 0 5px;
+}
