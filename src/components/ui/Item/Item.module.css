@@ -10,6 +10,12 @@
   margin-right: 10px;
 }
 
+@media only screen and (max-width: 620px) {
+  .imageContainer {
+    margin-right: 0;
+  }
+}
+
 .itemImage {
   grid-area: 1/1/8/8;
   z-index: -1;
