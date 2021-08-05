@@ -4,14 +4,15 @@ import {
   IoIosArrowDroprightCircle,
   IoIosCloseCircle,
 } from 'react-icons/io';
+import useData from '../../../hooks/useData';
 import { CarouselViewContext } from '../../../context/CarouselViewContext';
 import CarouselButton from '../CarouselButton/CarouselButton';
 import Item from '../Item/Item';
-import itemsCarousel from '../../../data/carouselItems';
 
 import styles from './CarouselItems.module.css';
 
 export default function CarouselItems() {
+  const { items } = useData();
   const { state, dispatch } = useContext(CarouselViewContext);
   const { start, end } = state;
 
@@ -28,7 +29,7 @@ export default function CarouselItems() {
           ) : (
             <CarouselButton icon={<IoIosCloseCircle />} />
           )}
-          {end < itemsCarousel.length ? (
+          {end < items.length ? (
             <CarouselButton dispatch={dispatchIncrement} icon={<IoIosArrowDroprightCircle />} />
           ) : (
             <CarouselButton icon={<IoIosCloseCircle />} />
@@ -37,13 +38,13 @@ export default function CarouselItems() {
       </div>
 
       <div className={styles.itemsContainer}>
-        {itemsCarousel.slice(start, end).map((item) => (
+        {items?.slice(start, end).map((item) => (
           <Item
             key={item.id}
             name={item.name}
             url={`${item.category}/${item.subCategory}/${item.name
-              .replace(' ', '-')
-              .toLowerCase()}`}
+              .replace(/ /g, '-')
+              .toLowerCase()}?i=${item.id}`}
             price={item.price}
             image={item.image}
             alt={item.title}
