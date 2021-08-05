@@ -5,7 +5,7 @@ import styles from './Item.module.css';
 
 export default function Item({ name, price, url = '/', image, alt }) {
   return (
-    <Link href={url} passHref>
+    <Link href={url} passHref scroll>
       <a href="replace" className={styles.imageContainer}>
         <div className={styles.itemImage}>
           <Image width={292} height={292} src={image} alt={alt} objectFit="contain" />
