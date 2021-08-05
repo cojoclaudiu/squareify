@@ -11,6 +11,12 @@
   }
 }
 
+@media only screen and (max-width: 620px) {
+  .smLftBox {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+}
+
 .imageContainer {
   grid-area: 1 / 1 / 8 /8;
   z-index: -1;

@@ -3,6 +3,12 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+@media only screen and (max-width: 620px) {
+  .headerMenu {
+    grid-area: 1/1/2/3;
+  }
+}
+
 .account,
 .wishlist,
 .trolley {

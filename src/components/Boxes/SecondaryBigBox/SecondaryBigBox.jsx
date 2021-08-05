@@ -5,9 +5,9 @@ import styles from './SecondaryBigBox.module.css';
 
 export default function SecondaryBigBox({ image, alt, title, button }) {
   return (
-    <div className={styles.bigBoxContainer}>
-      <Link href="/" passHref>
-        <a className={styles.boxImage} href="replace">
+    <Link href="/" passHref>
+      <a className={styles.bigBoxContainer} href="replace">
+        <div className={styles.boxImage}>
           <Image
             width={595}
             height={595}
@@ -18,12 +18,12 @@ export default function SecondaryBigBox({ image, alt, title, button }) {
             layout="responsive"
             objectFit="contain"
           />
-        </a>
-      </Link>
-      <h2 className={styles.bigBoxTitle}>{title}</h2>
-      <button type="button" className={styles.button}>
-        {button}
-      </button>
-    </div>
+        </div>
+        <h2 className={styles.bigBoxTitle}>{title}</h2>
+        <button type="button" className={styles.button}>
+          {button}
+        </button>
+      </a>
+    </Link>
   );
 }

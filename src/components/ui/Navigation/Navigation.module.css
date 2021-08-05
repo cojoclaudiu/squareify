@@ -8,6 +8,12 @@
   color: white;
 }
 
+@media only screen and (max-width: 620px) {
+  .navContainer {
+    display: none;
+  }
+}
+
 .linkContainer {
   display: flex;
   align-items: space-between;

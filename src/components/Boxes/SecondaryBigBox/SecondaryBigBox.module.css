@@ -1,16 +1,10 @@
 .bigBoxContainer {
-  grid-area: 1 / 5 / span 2 / 3;
+  grid-area: 1 / 3 /3 / 5;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
   background: rgb(13, 61, 65);
   background: linear-gradient(158deg, rgba(13, 61, 65, 1) 0%, rgba(216, 45, 20, 1) 100%);
-}
-
-@media only screen and (max-width: 1240px) {
-  .bigBoxContainer {
-    grid-area: 1 / 1 / 3/ 3;
-  }
 }
 
 .boxImage {
@@ -44,4 +38,25 @@
 }
 .button:hover {
   filter: brightness(1.1);
+}
+
+@media only screen and (max-width: 1240px) {
+  .bigBoxContainer {
+    grid-area: 1 / 1 / 3/ 3;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .bigBoxContainer {
+    grid-area: 1 / 1 / 2/ 2;
+    max-height: 29.25rem;
+  }
+
+  .boxImage {
+    height: 29.5rem;
+    width: 29.5rem;
+  }
+
+  .bigBoxTitle {
+    font-size: 1.2rem;
+  }
 }

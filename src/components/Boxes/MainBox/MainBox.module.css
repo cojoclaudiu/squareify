@@ -30,3 +30,22 @@
   font-size: var(--mainBoxDescription);
   color: white;
 }
+
+@media only screen and (max-width: 620px) {
+  .mainBox {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .mainImage {
+    height: 29.5rem;
+    width: 29.5rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .mainDescription {
+    font-size: 1.2rem;
+  }
+}

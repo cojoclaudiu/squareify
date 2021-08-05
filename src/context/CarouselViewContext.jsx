@@ -21,6 +21,7 @@ const CarouselViewProvider = ({ children }) => {
   const width = useWidth();
 
   function getNumItems(windowWidth) {
+    if (windowWidth < 621) return 1;
     if (windowWidth < 921) return 2;
     if (windowWidth < 1240) return 3;
     return 4;

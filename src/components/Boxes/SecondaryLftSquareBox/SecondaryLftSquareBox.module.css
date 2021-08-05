@@ -18,6 +18,11 @@
     grid-area: 4/ 1 / 5/ 2;
   }
 }
+@media only screen and (max-width: 620px) {
+  .smLftTopBox {
+    grid-area: 3/ 1 / 4/ 2;
+  }
+}
 
 .imageContainer {
   grid-area: 1 / 1 / 8 /8;

@@ -8,3 +8,18 @@
   height: 74px;
   /* background-color: lightsalmon; */
 }
+@media only screen and (max-width: 920px) {
+  .headerContainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    height: max-content;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .headerContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
