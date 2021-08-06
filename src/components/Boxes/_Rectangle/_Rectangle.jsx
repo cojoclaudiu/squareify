@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './_Rectangle.module.css';
 
-export default function Rectangle({ url, position, title, description, image, alt }) {
+export default function Rectangle({ url = '/', position, title, description, image, alt }) {
   return (
     <Link href={url} passHref>
       <a href="replace" className={`${styles.rectangleContainer} ${styles[position]}`}>
