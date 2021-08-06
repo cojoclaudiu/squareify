@@ -4,10 +4,6 @@ import useData from '../../../hooks/useData';
 import priceFormat from '../../../utils/priceFormat';
 import AddToButton from '../../Buttons/AddToButton/AddToButton';
 
-// to change
-import SquareBox from '../../Boxes/_SquareBox/_SquareBox';
-// to remove
-
 import styles from './ProductPage.module.css';
 
 export default function ItemPage() {
@@ -39,8 +35,6 @@ export default function ItemPage() {
               </div>
             </div>
             <p className={styles.productDescription}>{itemData.description}</p>
-
-            <SquareBox />
           </article>
 
           <section className={styles.productSidebar}>

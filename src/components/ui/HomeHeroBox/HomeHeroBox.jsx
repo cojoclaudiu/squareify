@@ -1,22 +1,24 @@
-import MainBox from '../../Boxes/MainBox/MainBox';
 import DoubleBox from '../../Boxes/DoubleBox/DoubleBox';
-import styles from './HomeHeroBox.module.css';
+import SquareBox from '../../Boxes/_SquareBox/_SquareBox';
+import SquareHeroBox from '../../Boxes/_SquareHeroBox/_SquareHeroBox';
 
 // Images
 import BackToSchool from '../../../../public/images/backtoschool.png';
 import Console from '../../../../public/images/console.png';
 import WannaPlay from '../../../../public/images/wanna-play.png';
 import AirPodsMax from '../../../../public/images/airpodsmax.png';
-import SquareBox from '../../Boxes/_SquareBox/_SquareBox';
+
+import styles from './HomeHeroBox.module.css';
 
 export default function HomeHeroBox() {
   return (
     <section className={styles.sectionHero}>
-      <MainBox
+      <SquareHeroBox
+        position="left"
         image={BackToSchool}
+        alt="Back to school banner"
         title="Are you ready?"
         description="#backtoschool"
-        alt="Back to school Ad"
       />
 
       <DoubleBox

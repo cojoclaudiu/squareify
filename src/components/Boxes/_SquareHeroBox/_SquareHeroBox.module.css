@@ -1,0 +1,33 @@
+.heroContainer {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  width: 59.5rem;
+  height: 59.5rem;
+}
+
+.imageContainer {
+  background-color: rgb(236, 255, 224);
+  grid-area: 1/1/12/12;
+  z-index: -1;
+}
+
+.titleHero {
+  grid-area: 2/2/3/11;
+}
+
+.descriptionHero {
+  grid-area: 3/2/4/11;
+}
+
+.buttonHero {
+  grid-area: 10/2/11/4;
+}
+
+.left {
+  grid-area: 1/1/3/3;
+}
+
+.right {
+  grid-area: 1/3/3/5;
+}

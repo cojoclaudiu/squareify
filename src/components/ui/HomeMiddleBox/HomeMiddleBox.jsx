@@ -1,16 +1,17 @@
 import Link from 'next/link';
-import SecondaryBigBox from '../../Boxes/SecondaryBigBox/SecondaryBigBox';
 
 import WashingMachine from '../../../../public/images/washing-machine-laundry.png';
 import Fridge from '../../../../public/images/fridge-freezers.png';
 import Battlefield from '../../../../public/images/battlefield-2042-banner.png';
 import styles from './HomeMiddleBox.module.css';
 import SquareBox from '../../Boxes/_SquareBox/_SquareBox';
+import SquareHeroBox from '../../Boxes/_SquareHeroBox/_SquareHeroBox';
 
 export default function HomeMiddleBox() {
   return (
     <section className={styles.sectionMiddle}>
-      <SecondaryBigBox
+      <SquareHeroBox
+        position="right"
         title="CHANGE THE RULES OF WAR"
         image={Battlefield}
         alt="Battlefield 2042 Portal"
