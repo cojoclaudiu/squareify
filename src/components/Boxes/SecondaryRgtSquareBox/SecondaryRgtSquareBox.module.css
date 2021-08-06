@@ -3,8 +3,8 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  background-color: #f2cf07;
-  background-image: linear-gradient(315deg, #f2cf07 0%, #55d284 74%);
+  background-color: #ebedee;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
 @media only screen and (max-width: 1240px) {
@@ -47,7 +47,7 @@
 
 .secondaryTitle,
 .secondaryDescription {
-  background-color: rgba(85, 210, 133, 0.3);
+  background-color: rgba(255, 255, 255, 0.4);
   text-align: center;
   justify-self: center;
   width: 90%;

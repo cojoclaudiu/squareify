@@ -18,7 +18,9 @@
   align-self: center;
   justify-self: center;
   font-size: 2.5rem;
-  background-color: rgba(144, 254, 222, 0.7);
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(5px);
+  color: rgb(144, 254, 222);
   padding: 5px 10px;
   z-index: 1;
 }
