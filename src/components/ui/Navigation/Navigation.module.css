@@ -1,7 +1,7 @@
 .navContainer {
   display: grid;
   justify-self: center;
-  margin-bottom: var(--marginNormal);
+  margin-bottom: var(--gap);
   background: var(--navColor);
   height: 45px;
   width: 100%;

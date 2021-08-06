@@ -1,11 +1,10 @@
-import Link from 'next/link';
-
 import WashingMachine from '../../../../public/images/washing-machine-laundry.png';
 import Fridge from '../../../../public/images/fridge-freezers.png';
 import Battlefield from '../../../../public/images/battlefield-2042-banner.png';
 import styles from './HomeMiddleBox.module.css';
 import SquareBox from '../../Boxes/_SquareBox/_SquareBox';
 import SquareHeroBox from '../../Boxes/_SquareHeroBox/_SquareHeroBox';
+import Rectangle from '../../Boxes/_Rectangle/_Rectangle';
 
 export default function HomeMiddleBox() {
   return (
@@ -34,11 +33,7 @@ export default function HomeMiddleBox() {
         footerDescription="Up to £120 off on selected products"
       />
 
-      <Link href="/" passHref>
-        <a href="replace" className={styles.btmDoubleBox}>
-          <div>bottom double box</div>
-        </a>
-      </Link>
+      <Rectangle position="bottomLeft" title="Box not finished" />
     </section>
   );
 }

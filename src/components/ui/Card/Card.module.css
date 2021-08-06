@@ -2,10 +2,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-self: center;
-  gap: 10px;
+  gap: var(--gap);
   height: var(--squareBox);
   width: var(--appWidth);
-  margin: var(--marginNormal) 0;
+  margin: var(--gap) 0;
 }
 
 .cardItemLeft {

@@ -2,9 +2,9 @@
   display: grid;
   grid-template-columns: repeat(15, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  height: 29.25rem;
-  width: 59.5rem;
-  background-color: cornsilk;
+  height: var(--square);
+  width: var(--heroSize);
+  background-color: gold;
 }
 
 .imageContainer {
@@ -33,4 +33,44 @@
 
 .secondBottomRight {
   grid-area: 2/3/3/5;
+}
+
+@media only screen and (max-width: 1240px) {
+  .secondTopLeft,
+  .bottomLeft {
+    grid-area: 3/1/4/4;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .secondTopLeft,
+  .bottomLeft {
+    grid-area: 3/1/4/3;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .rectangleContainer {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .secondTopLeft,
+  .bottomLeft {
+    grid-area: 2/1/3/2;
+    width: var(--square);
+  }
+
+  .imageContainer {
+    grid-area: 4/1/8/8;
+  }
+
+  .titleRectangle {
+    grid-area: 1/2/2/7;
+  }
+
+  .descriptionRectangle {
+    grid-area: 3/2/5/7;
+  }
 }

@@ -4,7 +4,7 @@
   justify-self: center;
   width: var(--appWidth);
   max-width: var(--appWidth);
-  min-width: 29.25rem;
+  min-width: var(--square);
 }
 
 .productMain {
@@ -23,7 +23,7 @@
 .productGallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0 10px;
+  gap: 0 var(--gap);
 }
 
 .mainImage {
@@ -38,7 +38,7 @@
   grid-area: 2/1/3/3;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0 10px;
+  gap: 0 var(--gap);
 }
 
 .thumbImage {

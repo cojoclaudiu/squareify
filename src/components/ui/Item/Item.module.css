@@ -2,12 +2,8 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  width: 29.25rem;
-  height: 29.25rem;
-}
-
-.imageContainer:not(:last-child) {
-  margin-right: 10px;
+  width: var(--square);
+  height: var(--square);
 }
 
 @media only screen and (max-width: 620px) {
@@ -19,8 +15,8 @@
 .itemImage {
   grid-area: 1/1/8/8;
   z-index: -1;
-  width: 29.25rem;
-  height: 29.25rem;
+  width: var(--square);
+  height: var(--square);
 }
 
 .itemTitle {
@@ -37,7 +33,7 @@
 .itemPrice {
   grid-area: 1/5/2/8;
   width: max-content;
-  padding: 5px 10px;
+  padding: 5px var(--gap);
   align-self: baseline;
   margin-left: auto;
 }

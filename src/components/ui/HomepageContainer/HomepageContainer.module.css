@@ -4,5 +4,5 @@
   grid-template-rows: repeat(2, 1fr);
   gap: var(--gap);
   height: calc(var(--appWidth) / 2 - var(--gap) / 2);
-  margin-bottom: 10px;
+  margin-bottom: var(--gap);
 }

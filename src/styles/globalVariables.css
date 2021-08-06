@@ -1,8 +1,15 @@
 :root {
+  /** SIZES */
   --appWidth: 1200px;
   --gap: 10px;
-  --marginNormal: 10px;
-  --squareBox: calc((var(--appWidth) / 4 - var(--gap)) + var(--gap) / 4);
+  --heroSize: 59.5rem;
+  --square: 29.25rem;
+  --carouselSize: calc(var(--heroSize) + (var(--square) * 2) + (var(--gap) * 2));
+
+  /**End SIZES*/
+
+  /**NEW COLORS */
+  /**END COLORS */
 
   /* Colors Homepage */
   --navColor: var(--mainGradient);
@@ -38,17 +45,20 @@
 @media only screen and (max-width: 1240px) {
   :root {
     --appWidth: 900px;
+    --carouselSize: calc(var(--heroSize) + var(--square) + var(--gap));
   }
 }
 
 @media only screen and (max-width: 920px) {
   :root {
     --appWidth: 600px;
+    --carouselSize: calc(var(--square) * 2 + var(--gap));
   }
 }
 
 @media only screen and (max-width: 620px) {
   :root {
     --appWidth: 300px;
+    --carouselSize: calc(var(--square));
   }
 }

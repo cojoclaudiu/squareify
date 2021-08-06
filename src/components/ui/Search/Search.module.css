@@ -19,14 +19,14 @@
 @media only screen and (max-width: 620px) {
   .inputContainer {
     grid-area: 3 / 1 /4/3;
-    max-width: 29.25rem;
+    max-width: var(--square);
     justify-self: baseline;
   }
 }
 
 .input {
   border-radius: 4px;
-  padding-left: 10px;
+  padding-left: var(--gap);
   font-size: 1.8rem;
   min-width: 74%;
   height: 100%;
@@ -37,7 +37,7 @@
   cursor: pointer;
   background-color: #f7f9fa;
   font-weight: lighter;
-  padding: 5px 10px;
+  padding: 5px var(--gap);
   height: 42px;
   right: 2px;
   position: absolute;

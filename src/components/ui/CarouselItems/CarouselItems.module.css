@@ -1,9 +1,8 @@
 .trendingContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   width: 100%;
-  margin-bottom: var(--marginNormal);
+  margin-bottom: var(--gap);
 }
 .buttonsContainer {
   display: flex;
@@ -11,18 +10,23 @@
 
 .itemsContainer {
   display: flex;
+  justify-content: space-between;
 }
 
 .trending {
+  align-self: center;
   font-size: 2.2rem;
 }
 
 .buttonsContainer {
+  align-self: center;
+  justify-self: flex-end;
+
   display: flex;
   justify-content: space-between;
   font-size: 3rem;
   background-color: var(--textColor);
-  padding: 5px 10px;
+  padding: 5px var(--gap);
   border-radius: 4px;
   width: 10rem;
 }

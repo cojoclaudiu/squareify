@@ -4,5 +4,5 @@
   justify-self: center;
   width: var(--appWidth);
   max-width: var(--appWidth);
-  min-width: 29.25rem;
+  min-width: var(--square);
 }
