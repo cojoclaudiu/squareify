@@ -44,10 +44,22 @@
 .thumbImage {
   width: 100%;
   height: 19.25rem;
-  background-color: yellowgreen;
+  background-color: var(--greenCart);
 }
 
 /*---------- END Image */
 
 .productSidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: space-around;
+  width: 80%;
+  min-width: 24rem;
+  height: 12rem;
 }

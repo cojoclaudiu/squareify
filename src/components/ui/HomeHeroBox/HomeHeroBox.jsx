@@ -1,7 +1,5 @@
 import MainBox from '../../Boxes/MainBox/MainBox';
 import DoubleBox from '../../Boxes/DoubleBox/DoubleBox';
-import SqureLeftBox from '../../Boxes/SquareLeftBox/SquareLeftBox';
-import SquareRightBox from '../../Boxes/SquareRightBox/SquareRightBox';
 import styles from './HomeHeroBox.module.css';
 
 // Images
@@ -9,6 +7,7 @@ import BackToSchool from '../../../../public/images/backtoschool.png';
 import Console from '../../../../public/images/console.png';
 import WannaPlay from '../../../../public/images/wanna-play.png';
 import AirPodsMax from '../../../../public/images/airpodsmax.png';
+import SquareBox from '../../Boxes/_SquareBox/_SquareBox';
 
 export default function HomeHeroBox() {
   return (
@@ -26,16 +25,19 @@ export default function HomeHeroBox() {
         description="#we've got more surprises for you"
         alt="Back to school Ad"
       />
-      <SqureLeftBox
+
+      <SquareBox
+        position="secondBottomLeft"
         image={WannaPlay}
-        title="Wanna play?"
-        description="#tell me more"
-        alt="Back to school Ad"
+        alt="Image with two people playing"
+        secondaryTextLeft="#tell me more"
+        secondaryTextRight="Wanna play?"
       />
 
-      <SquareRightBox
-        title="Ad"
-        description="see our #apple offers"
+      <SquareBox
+        position="secondBottomRight"
+        label="Ad"
+        title="see our #apple offers"
         image={AirPodsMax}
         alt="AirPods Max orange"
       />
