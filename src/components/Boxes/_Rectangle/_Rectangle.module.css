@@ -1,0 +1,36 @@
+.rectangleContainer {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  height: 29.25rem;
+  width: 59.5rem;
+  background-color: cornsilk;
+}
+
+.imageContainer {
+  grid-area: 1/1/8/16;
+}
+
+.titleRectangle {
+  grid-area: 1/1/3/8;
+}
+
+.descriptionRectangle {
+  grid-area: 3/1/4/8;
+}
+
+.topLeft {
+  grid-area: 1/1/2/3;
+}
+
+.bottomLeft {
+  grid-area: 2/1/3/3;
+}
+
+.secondTopLeft {
+  grid-area: 1/3/2/5;
+}
+
+.secondBottomRight {
+  grid-area: 2/3/3/5;
+}

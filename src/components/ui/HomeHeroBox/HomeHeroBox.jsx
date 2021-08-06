@@ -1,6 +1,7 @@
-import DoubleBox from '../../Boxes/DoubleBox/DoubleBox';
+// Components
 import SquareBox from '../../Boxes/_SquareBox/_SquareBox';
 import SquareHeroBox from '../../Boxes/_SquareHeroBox/_SquareHeroBox';
+import Rectangle from '../../Boxes/_Rectangle/_Rectangle';
 
 // Images
 import BackToSchool from '../../../../public/images/backtoschool.png';
@@ -21,11 +22,12 @@ export default function HomeHeroBox() {
         description="#backtoschool"
       />
 
-      <DoubleBox
+      <Rectangle
+        position="secondTopLeft"
         image={Console}
+        alt="Back to school Ad"
         title="Don't miss it again"
         description="#we've got more surprises for you"
-        alt="Back to school Ad"
       />
 
       <SquareBox

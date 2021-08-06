@@ -5,6 +5,7 @@ import priceFormat from '../../../utils/priceFormat';
 import AddToButton from '../../Buttons/AddToButton/AddToButton';
 
 import styles from './ProductPage.module.css';
+import Rectangle from '../../Boxes/_Rectangle/_Rectangle';
 
 export default function ItemPage() {
   const router = useRouter();
@@ -35,6 +36,7 @@ export default function ItemPage() {
               </div>
             </div>
             <p className={styles.productDescription}>{itemData.description}</p>
+            <Rectangle />
           </article>
 
           <section className={styles.productSidebar}>
