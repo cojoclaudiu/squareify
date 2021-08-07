@@ -8,38 +8,26 @@
 
   /**End SIZES*/
 
+  /** FONT SZIES*/
+  --heroTitle: 4.8rem;
+  --rectangleTitle: 3.8rem;
+  --squareFooterTitle: 1.8rem;
+
   /**NEW COLORS */
+  --mainBg: #f9faf9;
+  --textColor: #3b4043;
+  --yellow: #fcd833;
+
   /**END COLORS */
 
   /* Colors Homepage */
   --navColor: var(--mainGradient);
   --mainGradient: linear-gradient(-90deg, #0575e6, #764ba2);
-  --mainColor: #0575e6;
-  --textColor: #23292e;
+
+  --mainColor: #1973e8;
+
   --greenCart: #008442;
   --pinkLove: #e94c89;
-
-  --secondaryColor: #fed2d1;
-
-  --mainBoxGradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --mainBoxColor: #667eea;
-
-  --doubleBoxColor: #d7e1ec;
-  --doubleBoxGradient: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
-
-  --squareRightColor: rgb(218, 174, 173);
-  --squareRightGradient: radial-gradient(
-    circle,
-    rgba(218, 174, 173, 1) 54%,
-    rgba(175, 124, 121, 1) 84%
-  );
-
-  /* Font Sizes */
-  --mainBoxDescription: 3rem;
-  --mainBoxTitle: 6rem;
-
-  --doubleBoxTitle: 3rem;
-  --doubleBoxDescription: 1.3rem;
 }
 
 @media only screen and (max-width: 1240px) {

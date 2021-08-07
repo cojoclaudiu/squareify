@@ -4,7 +4,6 @@
   grid-template-rows: repeat(7, 1fr);
   height: var(--square);
   width: var(--heroSize);
-  background-color: gold;
 }
 
 .imageContainer {
@@ -12,11 +11,24 @@
 }
 
 .titleRectangle {
-  grid-area: 1/1/3/8;
+  grid-area: 1/1/4/8;
+  max-width: 70%;
+  justify-self: center;
+  text-align: center;
+  align-self: center;
+
+  /**To change*/
+  font-weight: 600;
+  font-size: var(--rectangleTitle);
 }
 
 .descriptionRectangle {
-  grid-area: 3/1/4/8;
+  grid-area: 4/1/6/8;
+  text-align: center;
+  justify-self: center;
+  width: 60%;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
 }
 
 .topLeft {
@@ -41,6 +53,15 @@
     grid-area: 3/1/4/4;
     width: 100%;
   }
+}
+
+/** COLORS BETA*/
+.main {
+  background-color: var(--mainBg);
+}
+
+.yellow {
+  background-color: var(--yellow);
 }
 
 @media only screen and (max-width: 920px) {

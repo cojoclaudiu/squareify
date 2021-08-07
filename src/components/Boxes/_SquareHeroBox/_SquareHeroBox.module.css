@@ -4,20 +4,29 @@
   grid-template-rows: repeat(11, 1fr);
   width: 59.5rem;
   height: 59.5rem;
+  background-color: var(--mainBg);
 }
 
 .imageContainer {
-  background-color: rgb(236, 255, 224);
   grid-area: 1/1/12/12;
-  z-index: -1;
 }
 
 .titleHero {
   grid-area: 2/2/3/11;
+  justify-self: center;
+
+  /**To change*/
+  font-weight: 600;
+  font-size: var(--heroTitle);
 }
 
 .descriptionHero {
   grid-area: 3/2/4/11;
+  justify-self: center;
+
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: 1px;
 }
 
 .buttonHero {
@@ -47,3 +56,5 @@
     height: var(--square);
   }
 }
+
+/** Colors*/

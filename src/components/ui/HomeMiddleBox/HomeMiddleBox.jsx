@@ -33,7 +33,7 @@ export default function HomeMiddleBox() {
         footerDescription="Up to £120 off on selected products"
       />
 
-      <Rectangle position="bottomLeft" title="Box not finished" />
+      <Rectangle color="yellow" position="bottomLeft" title="Box not finished" />
     </section>
   );
 }

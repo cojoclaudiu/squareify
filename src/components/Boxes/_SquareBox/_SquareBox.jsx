@@ -30,8 +30,8 @@ export default function SquareBox({
         )}
         {(footerTitle || footerDescription) && (
           <div className={styles.squareFooter}>
-            <div>{footerTitle}</div>
-            <div>{footerDescription}</div>
+            <div className={styles.footerTitle}>{footerTitle}</div>
+            <div className={styles.footerDescription}>{footerDescription}</div>
           </div>
         )}
       </a>

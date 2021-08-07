@@ -5,7 +5,6 @@ import priceFormat from '../../../utils/priceFormat';
 import AddToButton from '../../Buttons/AddToButton/AddToButton';
 
 import styles from './ProductPage.module.css';
-import Rectangle from '../../Boxes/_Rectangle/_Rectangle';
 
 export default function ItemPage() {
   const router = useRouter();
@@ -36,7 +35,6 @@ export default function ItemPage() {
               </div>
             </div>
             <p className={styles.productDescription}>{itemData.description}</p>
-            <Rectangle />
           </article>
 
           <section className={styles.productSidebar}>
@@ -45,6 +43,11 @@ export default function ItemPage() {
               <AddToButton to="trolley" />
               <AddToButton to="wishlist" />
             </div>
+            {itemData.inStock ? (
+              <div>In stock with 30 day free returns</div>
+            ) : (
+              <div>Coming soon</div>
+            )}
           </section>
         </>
       )}
