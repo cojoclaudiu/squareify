@@ -32,7 +32,9 @@ export default function HeaderMenu() {
       <button type="button" onClick={toggleCartHandler} className={styles.trolley}>
         <GiShoppingCart className={styles.headerIcon} />
         <div>Trolley</div>
-        <span>{itemsInCart}</span>
+        {itemsInCart !== 0 && (
+          <div className={styles.notificationItems}>{itemsInCart > 10 ? '10+' : itemsInCart}</div>
+        )}
       </button>
     </div>
   );
