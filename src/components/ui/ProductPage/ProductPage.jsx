@@ -1,16 +1,33 @@
+import { useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import useData from '../../../hooks/useData';
+import { addItemToCart } from '../../../store/cartSlice';
 import priceFormat from '../../../utils/priceFormat';
 import AddToButton from '../../Buttons/AddToButton/AddToButton';
 
 import styles from './ProductPage.module.css';
 
 export default function ItemPage() {
+  const dispatch = useDispatch();
   const router = useRouter();
   const { i: id } = router.query;
   const { items } = useData();
   const itemData = items.find((item) => item.id === id);
+
+  const addToCartHandler = () => {
+    if (itemData) {
+      dispatch(
+        addItemToCart({
+          url: router.asPath,
+          id: itemData.id,
+          image: itemData.image,
+          name: itemData.name,
+          price: Number(itemData.price),
+        }),
+      );
+    }
+  };
 
   return (
     <main className={styles.itemContainer}>
@@ -40,7 +57,7 @@ export default function ItemPage() {
           <section className={styles.productSidebar}>
             <h2 className={styles.productPrice}>{priceFormat(itemData.price)}</h2>
             <div className={styles.buttonsContainer}>
-              <AddToButton to="trolley" />
+              <AddToButton to="trolley" addToCart={addToCartHandler} />
               <AddToButton to="wishlist" />
             </div>
             {itemData.inStock ? (

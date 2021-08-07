@@ -1,0 +1,45 @@
+.cartContainer {
+  display: grid;
+  grid-auto-flow: row;
+  width: calc(var(--square) * 2);
+  justify-self: center;
+}
+.productContainer {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+
+  margin-bottom: calc(var(--gap));
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.productImage {
+  width: 15rem;
+  height: 15rem;
+  align-self: center;
+  justify-self: center;
+}
+
+.productInfo {
+  align-self: center;
+  justify-self: flex-start;
+}
+
+.productTitle {
+  font-weight: lighter;
+  font-size: 1.8rem;
+}
+
+.secondaryHeading {
+  margin-right: 3px;
+}
+
+.titlePriceContainer {
+  display: flex;
+}
+
+.quantityTitle {
+}
+
+.quantityValue {
+}

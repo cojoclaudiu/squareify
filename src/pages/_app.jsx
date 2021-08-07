@@ -5,7 +5,7 @@ import Navigation from '../components/ui/Navigation/Navigation';
 
 import '../styles/_globals.css';
 
-function Nextify({ Component, pageProps }) {
+function Squareify({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <div className="appWrapper">
@@ -17,4 +17,4 @@ function Nextify({ Component, pageProps }) {
   );
 }
 
-export default Nextify;
+export default Squareify;
