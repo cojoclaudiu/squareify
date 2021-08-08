@@ -6,7 +6,7 @@
 }
 .productContainer {
   display: grid;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: max-content 2fr 1fr;
 
   margin-bottom: calc(var(--gap));
   border: 1px solid var(--border);
@@ -42,4 +42,23 @@
 }
 
 .quantityValue {
+}
+
+.buttonsContainer {
+  align-self: center;
+  justify-self: center;
+}
+
+.addButton,
+.removeButton {
+  cursor: pointer;
+  font-size: 4rem;
+  transition: 0.3s;
+}
+
+.addButton:hover {
+  color: green;
+}
+.removeButton:hover {
+  color: red;
 }

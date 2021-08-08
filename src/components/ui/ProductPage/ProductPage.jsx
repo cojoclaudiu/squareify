@@ -1,24 +1,40 @@
 import { useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import useData from '../../../hooks/useData';
-import { addItemToCart } from '../../../store/cartSlice';
-import priceFormat from '../../../utils/priceFormat';
+import { addToWishlist } from 'store/wishlistSlice';
+import { addItemToCart } from 'store/cartSlice';
+import useData from 'hooks/useData';
+import priceFormat from 'utils/priceFormat';
 import AddToButton from '../../Buttons/AddToButton/AddToButton';
 
 import styles from './ProductPage.module.css';
 
 export default function ItemPage() {
-  const dispatch = useDispatch();
   const router = useRouter();
   const { i: id } = router.query;
   const { items } = useData();
+
+  const dispatch = useDispatch();
   const itemData = items.find((item) => item.id === id);
 
   const addToCartHandler = () => {
     if (itemData) {
       dispatch(
         addItemToCart({
+          url: router.asPath,
+          id: itemData.id,
+          image: itemData.image,
+          name: itemData.name,
+          price: Number(itemData.price),
+        }),
+      );
+    }
+  };
+
+  const addToWishlistHandler = () => {
+    if (itemData) {
+      dispatch(
+        addToWishlist({
           url: router.asPath,
           id: itemData.id,
           image: itemData.image,
@@ -37,20 +53,28 @@ export default function ItemPage() {
         <>
           <article className={styles.productMain}>
             <h1 className={styles.productTitle}>{itemData.name}</h1>
+
             <div className={styles.productGallery}>
               <div className={styles.mainImage}>
-                <Image width={400} height={400} src={itemData.image} />
+                <Image width={595} height={595} src={itemData.image} objectFit="contain" />
               </div>
-              <div className={styles.secondaryImage}>
-                <Image width={400} height={400} src={itemData.image} />
-              </div>
-              <div className={styles.thumbContainer}>
-                <div className={styles.thumbImage}>Item </div>
-                <div className={styles.thumbImage}>Item </div>
-                <div className={styles.thumbImage}>Item </div>
-                <div className={styles.thumbImage}>Item </div>
+
+              <div className={styles.thumbsContainer}>
+                <div className={styles.thumbImage}>
+                  <Image width={300} height={300} src={itemData.image} objectFit="contain" />
+                </div>
+                <div className={styles.thumbImage}>
+                  <Image width={300} height={300} src={itemData.image} objectFit="contain" />
+                </div>
+                <div className={styles.thumbImage}>
+                  <Image width={300} height={300} src={itemData.image} objectFit="contain" />
+                </div>
+                <div className={styles.thumbImage}>
+                  <Image width={300} height={300} src={itemData.image} objectFit="contain" />
+                </div>
               </div>
             </div>
+
             <p className={styles.productDescription}>{itemData.description}</p>
           </article>
 
@@ -58,7 +82,7 @@ export default function ItemPage() {
             <h2 className={styles.productPrice}>{priceFormat(itemData.price)}</h2>
             <div className={styles.buttonsContainer}>
               <AddToButton to="trolley" addToCart={addToCartHandler} />
-              <AddToButton to="wishlist" />
+              <AddToButton to="wishlist" addToWishlist={addToWishlistHandler} />
             </div>
             {itemData.inStock ? (
               <div>In stock with 30 day free returns</div>

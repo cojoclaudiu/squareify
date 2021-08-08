@@ -10,6 +10,7 @@ export default function HomeMiddleBox() {
   return (
     <section className={styles.sectionMiddle}>
       <SquareHeroBox
+        color="titlePortal"
         position="right"
         title="CHANGE THE RULES OF WAR"
         image={Battlefield}

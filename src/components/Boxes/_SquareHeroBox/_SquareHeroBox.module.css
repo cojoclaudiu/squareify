@@ -5,17 +5,18 @@
   width: 59.5rem;
   height: 59.5rem;
   background-color: var(--mainBg);
+  z-index: -2;
 }
 
 .imageContainer {
   grid-area: 1/1/12/12;
+  z-index: -1;
 }
 
 .titleHero {
   grid-area: 2/2/3/11;
   justify-self: center;
-
-  /**To change*/
+  text-align: center;
   font-weight: 600;
   font-size: var(--heroTitle);
 }
@@ -58,3 +59,7 @@
 }
 
 /** Colors*/
+.titlePortal {
+  color: #99f9da;
+  background-color: rgba(255, 255, 255, 0.15);
+}

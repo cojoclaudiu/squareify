@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { GiShoppingCart } from 'react-icons/gi';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { IoPersonCircleOutline } from 'react-icons/io5';
+import Notification from 'components/Notification/Notification';
 import { toggleCart } from '../../../store/showCartSlice';
 import styles from './HeaderMenu.module.css';
 
@@ -10,6 +11,8 @@ export default function HeaderMenu() {
   const router = useRouter();
   const dispatch = useDispatch();
   const itemsInCart = useSelector((state) => state.cart.totalCartItems);
+
+  const wishListItems = useSelector((state) => state.wishlist.totalWishes);
 
   const toggleCartHandler = (e) => {
     e.preventDefault();
@@ -27,14 +30,13 @@ export default function HeaderMenu() {
       <div className={styles.wishlist}>
         <AiOutlineHeart className={styles.headerIcon} />
         <div>Wishlist</div>
+        <Notification color="pink" items={wishListItems} />
       </div>
 
       <button type="button" onClick={toggleCartHandler} className={styles.trolley}>
         <GiShoppingCart className={styles.headerIcon} />
         <div>Trolley</div>
-        {itemsInCart !== 0 && (
-          <div className={styles.notificationItems}>{itemsInCart > 9 ? '9+' : itemsInCart}</div>
-        )}
+        <Notification color="blue" items={itemsInCart} />
       </button>
     </div>
   );

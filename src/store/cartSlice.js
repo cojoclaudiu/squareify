@@ -37,11 +37,12 @@ const cartSlice = createSlice({
     },
     removeItemFromCart(state, action) {
       const id = action.payload;
-      const existingItem = state.items.find((item) => item.id === id);
+      const existingItem = state.items.find((item) => item.productId === id);
+
       state.totalCartItems -= 1;
 
       if (existingItem.quantity === 1) {
-        state.items = state.items.filter((item) => item.id !== id);
+        state.items = state.items.filter((item) => item.productId !== id);
       } else {
         existingItem.quantity -= 1;
         existingItem.totalProductPrice -= Number(existingItem.productPrice);

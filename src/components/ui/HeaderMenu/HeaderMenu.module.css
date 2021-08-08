@@ -9,7 +9,8 @@
   }
 }
 
-.trolley {
+.trolley,
+.wishlist {
   position: relative;
 }
 
@@ -27,20 +28,4 @@
 
 .headerIcon {
   font-size: 2.5rem;
-}
-
-.notificationItems {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--mainColor);
-  width: 2.3rem;
-  font-size: 0.7em;
-  font-weight: lighter;
-  padding: 6px 2px;
-  color: white;
-  border-radius: 1px;
-  position: absolute;
-  right: 2rem;
-  top: 1rem;
 }

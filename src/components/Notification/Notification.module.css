@@ -1,0 +1,21 @@
+.notification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  font-size: 0.8em;
+  font-weight: lighter;
+  color: white;
+  border-radius: 1px;
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+}
+
+.blue {
+  background-color: var(--mainColor);
+}
+.pink {
+  background-color: var(--pinkLove);
+}

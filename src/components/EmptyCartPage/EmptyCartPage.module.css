@@ -1,0 +1,12 @@
+.ecpContainer {
+  justify-self: center;
+  width: var(--appWidth);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageTitle {
+  font-size: var(--heroTitle);
+}

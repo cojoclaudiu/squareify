@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from './_SquareHeroBox.module.css';
 
 export default function SquareHeroBox({
+  color,
   url = '/',
   alt,
   image,
@@ -13,13 +14,13 @@ export default function SquareHeroBox({
 }) {
   return (
     <Link href={url} passHref>
-      <a href="replace" className={`${styles.heroContainer} ${styles[position]}`}>
+      <a href="replace" className={`${styles.heroContainer} ${styles[position]} `}>
         {image && alt && (
           <div className={styles.imageContainer}>
             <Image src={image} alt={alt} width={595} height={595} />
           </div>
         )}
-        {title && <h2 className={styles.titleHero}>{title}</h2>}
+        {title && <h2 className={`${styles.titleHero} ${styles[color]}`}>{title}</h2>}
         {description && <span className={styles.descriptionHero}>{description}</span>}
         {button && <div className={styles.buttonHero}>{button}</div>}
       </a>

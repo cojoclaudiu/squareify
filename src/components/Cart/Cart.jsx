@@ -1,14 +1,22 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { useSelector } from 'react-redux';
-import priceFormat from '../../utils/priceFormat';
+import { useDispatch, useSelector } from 'react-redux';
+import { addItemToCart, removeItemFromCart } from 'store/cartSlice';
+import EmptyCartPage from 'components/EmptyCartPage/EmptyCartPage';
+import { AiFillMinusSquare, AiFillPlusSquare } from 'react-icons/ai';
+import priceFormat from 'utils/priceFormat';
 import styles from './Cart.module.css';
 
 export default function Cart() {
   const cartItems = useSelector((state) => state.cart.items);
+  const dispatch = useDispatch();
+
+  const addToCartHandler = (object) => () => dispatch(addItemToCart(object));
+
+  const removeFromCartHandler = (id) => () => dispatch(removeItemFromCart(id));
 
   return cartItems?.length === 0 ? (
-    <div>You have no itemes in your cart, go back and add something</div>
+    <EmptyCartPage />
   ) : (
     <div className={styles.cartContainer}>
       {cartItems.map((item) => (
@@ -35,6 +43,27 @@ export default function Cart() {
               <h3 className={styles.secondaryHeading}>Total price:</h3>
               <span>{priceFormat(item.totalProductPrice)}</span>
             </div>
+          </div>
+
+          <div className={styles.buttonsContainer}>
+            <button
+              className={styles.addButton}
+              type="button"
+              onClick={addToCartHandler({
+                id: item.productId,
+                name: item.productName,
+                price: item.productPrice,
+              })}
+            >
+              <AiFillPlusSquare />
+            </button>
+            <button
+              className={styles.removeButton}
+              type="button"
+              onClick={removeFromCartHandler(item.productId)}
+            >
+              <AiFillMinusSquare />
+            </button>
           </div>
         </div>
       ))}
