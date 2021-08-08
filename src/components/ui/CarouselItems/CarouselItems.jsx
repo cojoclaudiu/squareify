@@ -4,8 +4,8 @@ import {
   IoIosArrowDroprightCircle,
   IoIosCloseCircle,
 } from 'react-icons/io';
-import useData from '../../../hooks/useData';
-import { CarouselViewContext } from '../../../context/CarouselViewContext';
+import useData from 'hooks/useData';
+import { CarouselViewContext } from 'context/CarouselViewContext';
 import CarouselButton from '../CarouselButton/CarouselButton';
 import Item from '../Item/Item';
 

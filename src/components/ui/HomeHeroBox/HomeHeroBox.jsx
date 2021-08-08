@@ -1,8 +1,7 @@
 // Components
-import SquareBox from '../../Boxes/_SquareBox/_SquareBox';
-import SquareHeroBox from '../../Boxes/_SquareHeroBox/_SquareHeroBox';
-import Rectangle from '../../Boxes/_Rectangle/_Rectangle';
-
+import SquareBox from 'components/Boxes/_SquareBox/_SquareBox';
+import SquareHeroBox from 'components/Boxes/_SquareHeroBox/_SquareHeroBox';
+import Rectangle from 'components/Boxes/_Rectangle/_Rectangle';
 // Images
 import BackToSchool from '../../../../public/images/backtoschool.png';
 import Console from '../../../../public/images/console.png';

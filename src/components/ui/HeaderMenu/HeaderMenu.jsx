@@ -33,7 +33,7 @@ export default function HeaderMenu() {
         <GiShoppingCart className={styles.headerIcon} />
         <div>Trolley</div>
         {itemsInCart !== 0 && (
-          <div className={styles.notificationItems}>{itemsInCart > 10 ? '10+' : itemsInCart}</div>
+          <div className={styles.notificationItems}>{itemsInCart > 9 ? '9+' : itemsInCart}</div>
         )}
       </button>
     </div>

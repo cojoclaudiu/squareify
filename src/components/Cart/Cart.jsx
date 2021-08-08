@@ -2,13 +2,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useSelector } from 'react-redux';
 import priceFormat from '../../utils/priceFormat';
-
 import styles from './Cart.module.css';
 
 export default function Cart() {
   const cartItems = useSelector((state) => state.cart.items);
 
-  return (
+  return cartItems?.length === 0 ? (
+    <div>You have no itemes in your cart, go back and add something</div>
+  ) : (
     <div className={styles.cartContainer}>
       {cartItems.map((item) => (
         <div className={styles.productContainer} key={item.productId}>
