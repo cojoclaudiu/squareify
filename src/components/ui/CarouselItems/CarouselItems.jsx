@@ -4,7 +4,6 @@ import {
   IoIosArrowDroprightCircle,
   IoIosCloseCircle,
 } from 'react-icons/io';
-import useData from 'hooks/useData';
 import { CarouselViewContext } from 'context/CarouselViewContext';
 import CarouselButton from '../CarouselButton/CarouselButton';
 import Item from '../Item/Item';
@@ -12,8 +11,7 @@ import Item from '../Item/Item';
 import styles from './CarouselItems.module.css';
 
 export default function CarouselItems() {
-  const { items } = useData();
-  const { state, dispatch } = useContext(CarouselViewContext);
+  const { state, dispatch, items } = useContext(CarouselViewContext);
   const { start, end } = state;
 
   const dispatchIncrement = () => dispatch({ type: 'increment' });
@@ -38,7 +36,7 @@ export default function CarouselItems() {
       </div>
 
       <div className={styles.itemsContainer}>
-        {items?.slice(start, end).map((item) => (
+        {items?.slice(start, end > items.length ? 10 : end).map((item) => (
           <Item
             key={item.id}
             name={item.name}

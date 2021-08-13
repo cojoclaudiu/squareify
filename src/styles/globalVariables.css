@@ -5,6 +5,7 @@
   --heroSize: 59.5rem;
   --square: 29.25rem;
   --carouselSize: calc(var(--heroSize) + (var(--square) * 2) + (var(--gap) * 2));
+  --items: 4;
 
   /**End SIZES*/
 
@@ -34,6 +35,7 @@
   :root {
     --appWidth: 900px;
     --carouselSize: calc(var(--heroSize) + var(--square) + var(--gap));
+    --items: 3;
   }
 }
 
@@ -41,6 +43,7 @@
   :root {
     --appWidth: 600px;
     --carouselSize: calc(var(--square) * 2 + var(--gap));
+    --items: 2;
   }
 }
 
@@ -48,5 +51,6 @@
   :root {
     --appWidth: 300px;
     --carouselSize: calc(var(--square));
+    --items: 1;
   }
 }
