@@ -1,6 +1,6 @@
-import { createContext, useReducer } from 'react';
+import { createContext, useReducer, useState, useEffect } from 'react';
 import useData from 'hooks/useData';
-import useWidth from 'hooks/useWidth';
+import useWindowWidth from 'hooks/useWindowWidth';
 
 export const CarouselViewContext = createContext(null);
 
@@ -15,25 +15,23 @@ const carouselViewReducer = (state, action) => {
   }
 };
 
-const getNumItems = (windowSize) => {
-  if (windowSize < 621) return 1;
-  if (windowSize < 921) return 2;
-  if (windowSize < 1240) return 3;
-
-  return 4;
-};
-
 const CarouselViewProvider = ({ children }) => {
+  const [showItems, setShowItems] = useState(4);
+  const width = useWindowWidth();
+
+  useEffect(() => {
+    setShowItems(Number(getComputedStyle(document.body).getPropertyValue('--items')));
+  }, [width]);
+
   const { items } = useData();
-  const width = useWidth();
 
   const [state, dispatch] = useReducer(carouselViewReducer, { start: 0 });
 
-  const diff = getNumItems(width) - items.length + state.start;
+  const diff = showItems - items.length + state.start;
 
   const values = {
-    start: diff <= 0 ? state.start : state.start - getNumItems(width),
-    end: diff <= 0 ? state.start + getNumItems(width) : state.start,
+    start: diff <= 0 ? state.start : state.start - showItems,
+    end: diff <= 0 ? state.start + showItems : state.start,
   };
 
   const value = { state: values, dispatch, items };

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const useWidth = () => {
+const useWindowWidth = () => {
   // Initialize state with undefined width/height so server and client renders match
   // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
   const [width, setWidth] = useState(null);
@@ -25,4 +25,4 @@ const useWidth = () => {
   return width;
 };
 
-export default useWidth;
+export default useWindowWidth;
