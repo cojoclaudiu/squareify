@@ -15,20 +15,18 @@
   --squareFooterTitle: 1.8rem;
 
   /**NEW COLORS */
-  --mainBg: #f9faf9;
-  --textColor: #3b4043;
+  --mainBg: #f5f4f7;
+  --textColor: #1d1c1f;
   --yellow: #fcd833;
   --border: #d9dcdf;
-  --mainColor: #1973e8;
+  --mainColor: #0070e3;
 
   /**END COLORS */
 
   /* Colors Homepage */
-  --navColor: var(--mainGradient);
-  --mainGradient: linear-gradient(-90deg, #0575e6, #764ba2);
-
-  --greenCart: #008442;
+  --navColor: var(--mainBg);
   --pinkLove: #e94c89;
+  --redPrice: #e10411;
 }
 
 @media only screen and (max-width: 1240px) {

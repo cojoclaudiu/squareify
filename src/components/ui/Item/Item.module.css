@@ -17,6 +17,7 @@
   z-index: -1;
   width: var(--square);
   height: var(--square);
+  background-color: var(--mainBg);
 }
 
 .itemTitle {
@@ -27,8 +28,9 @@
   text-overflow: ellipsis;
   width: 100%;
   align-self: flex-end;
-  padding: 5px 0;
-  background-color: white;
+  padding: 0.5rem 1rem;
+  background-color: rgba(245, 244, 247, 0.9);
+  text-align: center;
 }
 
 .itemPrice {
@@ -36,12 +38,16 @@
   width: max-content;
   padding: 5px var(--gap);
   align-self: baseline;
-  margin-left: auto;
+  justify-self: flex-end;
+  margin: 0.5rem;
+
+  background-color: var(--yellow);
+  font-weight: bold;
+  border-radius: 2px;
 }
 
-.itemTitle,
+/* .itemTitle,
 .itemPrice {
   text-align: center;
   font-size: 1.3rem;
-  font-weight: normal;
-}
+} */

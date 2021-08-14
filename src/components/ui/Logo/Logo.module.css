@@ -3,8 +3,5 @@
   align-items: center;
   justify-self: baseline;
   font-size: 5rem;
-  background: -webkit-linear-gradient(360deg, #0575e6, #764ba2);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: --var(--textColor);
 }
