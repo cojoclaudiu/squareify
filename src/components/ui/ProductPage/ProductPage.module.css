@@ -56,14 +56,12 @@
 .productSidebar {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .buttonsContainer {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  justify-content: space-around;
+  display: grid;
+  gap: 1rem;
   width: 80%;
   min-width: 24rem;
-  height: 12rem;
 }

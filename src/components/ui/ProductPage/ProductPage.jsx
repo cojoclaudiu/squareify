@@ -17,6 +17,13 @@ export default function ItemPage() {
   const dispatch = useDispatch();
   const itemData = items.find((item) => item.id === id);
 
+  const productInStock = (item) =>
+    item ? (
+      <div className={styles.inStock}>In stock with 30 day free returns</div>
+    ) : (
+      <div className={styles.outOfStock}>Coming soon</div>
+    );
+
   const addToCartHandler = () => {
     if (itemData) {
       dispatch(
@@ -79,16 +86,12 @@ export default function ItemPage() {
           </article>
 
           <section className={styles.productSidebar}>
-            <h2 className={styles.productPrice}>{priceFormat(itemData.price)}</h2>
             <div className={styles.buttonsContainer}>
+              <h2 className={styles.productPrice}>{priceFormat(itemData.price)}</h2>
               <AddToButton to="trolley" addToCart={addToCartHandler} />
               <AddToButton to="wishlist" addToWishlist={addToWishlistHandler} />
+              {productInStock(itemData.inStock)}
             </div>
-            {itemData.inStock ? (
-              <div>In stock with 30 day free returns</div>
-            ) : (
-              <div>Coming soon</div>
-            )}
           </section>
         </>
       )}
