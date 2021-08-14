@@ -13,7 +13,7 @@ export default function AddToButton({ to, addToCart, addToWishlist }) {
       <div className={styles.buttonIcon}>
         {(to === 'wishlist' && <AiOutlineHeart />) || (to === 'trolley' && <GiShoppingCart />)}
       </div>
-      <div>Add to {to}</div>
+      <div className={styles.buttonTitle}>Add to {to}</div>
     </button>
   );
 }

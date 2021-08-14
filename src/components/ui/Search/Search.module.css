@@ -1,6 +1,7 @@
 .inputContainer {
   display: flex;
   align-self: center;
+  align-items: center;
   justify-self: center;
   position: relative;
   height: 46px;
@@ -43,4 +44,9 @@
   position: absolute;
   border-radius: 4px;
   width: 25%;
+}
+
+.searchButton:hover {
+  background-color: var(--textColor);
+  color: var(--mainBg);
 }

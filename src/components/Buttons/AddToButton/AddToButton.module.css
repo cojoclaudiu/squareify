@@ -1,18 +1,27 @@
 .addToButton {
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   font-weight: bold;
-  font-size: 1.6rem;
-  padding: 0.5rem 2rem;
+  font-size: 1.8rem;
+  padding: 1rem 0;
   border-radius: 0.4rem;
+  gap: 1rem;
 }
 
 .buttonIcon {
-  margin-top: 0.2rem;
-  margin-right: 0.5rem;
+  grid-area: 1/2/2/3;
+  display: flex;
+  align-items: center;
+  justify-self: flex-end;
   font-size: 3rem;
+}
+
+.buttonTitle {
+  grid-area: 1/3/2/6;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3rem;
 }
 
 .trolley {
@@ -21,7 +30,16 @@
   color: var(--textColor);
 }
 
+.trolley:hover {
+  filter: brightness(1.02);
+}
+
 .wishlist {
   border: 1px solid var(--pinkLove);
   color: var(--pinkLove);
+}
+
+.wishlist:hover {
+  filter: brightness(0.9);
+  background-color: rgba(233, 76, 137, 0.05);
 }

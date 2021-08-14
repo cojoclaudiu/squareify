@@ -5,6 +5,7 @@ import {
   IoIosCloseCircle,
 } from 'react-icons/io';
 import { CarouselViewContext } from 'context/CarouselViewContext';
+import urlProduct from 'utils/urlProduct';
 import CarouselButton from '../CarouselButton/CarouselButton';
 import Item from '../Item/Item';
 
@@ -40,9 +41,7 @@ export default function CarouselItems() {
           <Item
             key={item.id}
             name={item.name}
-            url={`${item.category}/${item.subCategory}/${item.name
-              .replace(/ /g, '-')
-              .toLowerCase()}?i=${item.id}`}
+            url={urlProduct(item)}
             price={item.price}
             image={item.image}
             alt={item.title}

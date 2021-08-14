@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import useData from 'hooks/useData';
 import { useRouter } from 'next/router';
 import axios from 'axios';
+import urlProduct from 'utils/urlProduct';
 import styles from './EditProductForm.module.css';
 
 export default function EditProductForm() {
   const [editedItem, setEditedItem] = useState({ name: '', description: '' });
+  const [isLoading, setIsLoading] = useState(false);
 
   const router = useRouter();
   const { i: id } = router.query;
@@ -15,10 +17,16 @@ export default function EditProductForm() {
 
   const onUpdateHandler = (e) => {
     e.preventDefault();
-    axios.patch(
-      `https://nextify31-default-rtdb.europe-west1.firebasedatabase.app/store/${index}.json`,
-      editedItem,
-    );
+    setIsLoading(true);
+    axios
+      .patch(
+        `https://nextify31-default-rtdb.europe-west1.firebasedatabase.app/store/${index}.json`,
+        editedItem,
+      )
+      .then(() => {
+        setIsLoading(false);
+        router.push(urlProduct(itemData));
+      });
   };
 
   useEffect(() => {
@@ -47,7 +55,7 @@ export default function EditProductForm() {
       />
 
       <button className={styles.updateButton} type="submit">
-        Update Product
+        {isLoading ? 'Loading' : 'Update Product'}
       </button>
     </form>
   );

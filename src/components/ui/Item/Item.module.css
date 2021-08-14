@@ -11,10 +11,12 @@
     margin-right: 0;
   }
 }
+.linkImage {
+  grid-area: 1/1/8/8;
+}
 
 .itemImage {
-  grid-area: 1/1/8/8;
-  z-index: -1;
+  cursor: pointer;
   width: var(--square);
   height: var(--square);
   background-color: var(--mainBg);
@@ -31,6 +33,7 @@
   padding: 0.5rem 1rem;
   background-color: rgba(245, 244, 247, 0.9);
   text-align: center;
+  z-index: 2;
 }
 
 .itemPrice {
@@ -44,10 +47,17 @@
   background-color: var(--yellow);
   font-weight: bold;
   border-radius: 2px;
+  z-index: 2;
 }
 
-/* .itemTitle,
-.itemPrice {
-  text-align: center;
-  font-size: 1.3rem;
-} */
+.wishlistIcon {
+  grid-area: 1/1/2/2;
+  align-self: center;
+  justify-self: center;
+  font-size: 2rem;
+  z-index: 2;
+}
+
+.wishlistIcon:hover {
+  color: var(--pinkLove);
+}
