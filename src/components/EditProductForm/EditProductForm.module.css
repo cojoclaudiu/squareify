@@ -1,0 +1,16 @@
+.productContainer {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  width: var(--appWidth);
+  max-width: var(--appWidth);
+  min-width: var(--square);
+}
+
+.productName {
+  height: 10rem;
+}
+
+.productDescription {
+  height: 20rem;
+}

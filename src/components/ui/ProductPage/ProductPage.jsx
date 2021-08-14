@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 import { useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
@@ -5,6 +6,7 @@ import { addToWishlist } from 'store/wishlistSlice';
 import { addItemToCart } from 'store/cartSlice';
 import useData from 'hooks/useData';
 import priceFormat from 'utils/priceFormat';
+import ReactMarkdown from 'react-markdown';
 import AddToButton from '../../Buttons/AddToButton/AddToButton';
 
 import styles from './ProductPage.module.css';
@@ -23,6 +25,9 @@ export default function ItemPage() {
     ) : (
       <div className={styles.outOfStock}>Coming soon</div>
     );
+
+  const editProductHandler = (item) =>
+    router.push(`/edit-product/${item.name.replace(/ /g, '-')}?i=${item.id}`);
 
   const addToCartHandler = () => {
     if (itemData) {
@@ -60,6 +65,9 @@ export default function ItemPage() {
         <>
           <article className={styles.productMain}>
             <h1 className={styles.productTitle}>{itemData.name}</h1>
+            <button type="button" onClick={() => editProductHandler(itemData)}>
+              Edit
+            </button>
 
             <div className={styles.productGallery}>
               <div className={styles.mainImage}>
@@ -82,7 +90,9 @@ export default function ItemPage() {
               </div>
             </div>
 
-            <p className={styles.productDescription}>{itemData.description}</p>
+            <div className={styles.productDescription}>
+              <ReactMarkdown children={itemData.description} />
+            </div>
           </article>
 
           <section className={styles.productSidebar}>
