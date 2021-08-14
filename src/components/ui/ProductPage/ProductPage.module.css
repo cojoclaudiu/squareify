@@ -9,10 +9,12 @@
 
 .productMain {
   display: grid;
+  gap: 1rem 0;
   grid-template-rows: auto;
 }
 
 .productTitle {
+  font-size: var(--productTitle);
   font-weight: lighter;
 }
 

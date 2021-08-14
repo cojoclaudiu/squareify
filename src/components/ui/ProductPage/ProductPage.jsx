@@ -7,6 +7,7 @@ import { addItemToCart } from 'store/cartSlice';
 import useData from 'hooks/useData';
 import priceFormat from 'utils/priceFormat';
 import ReactMarkdown from 'react-markdown';
+import ActionProductButton from 'components/Buttons/ActionProductButton/ActionProductButton';
 import AddToButton from '../../Buttons/AddToButton/AddToButton';
 
 import styles from './ProductPage.module.css';
@@ -26,7 +27,7 @@ export default function ItemPage() {
       <div className={styles.outOfStock}>Coming soon</div>
     );
 
-  const editProductHandler = (item) =>
+  const editProductHandler = (item) => () =>
     router.push(`/edit-product/${item.name.replace(/ /g, '-')}?i=${item.id}`);
 
   const addToCartHandler = () => {
@@ -65,9 +66,7 @@ export default function ItemPage() {
         <>
           <article className={styles.productMain}>
             <h1 className={styles.productTitle}>{itemData.name}</h1>
-            <button type="button" onClick={() => editProductHandler(itemData)}>
-              Edit
-            </button>
+            <ActionProductButton name="Edit" action={editProductHandler(itemData)} />
 
             <div className={styles.productGallery}>
               <div className={styles.mainImage}>

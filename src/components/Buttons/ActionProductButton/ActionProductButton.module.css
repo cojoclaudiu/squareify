@@ -1,0 +1,11 @@
+.actionButton {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 0 0.5rem;
+  width: max-content;
+  background-color: var(--mainBg);
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  border: 1px solid var(--border);
+}

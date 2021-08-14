@@ -46,7 +46,9 @@ export default function EditProductForm() {
         name="productDescription"
       />
 
-      <button type="submit">Update Product</button>
+      <button className={styles.updateButton} type="submit">
+        Update Product
+      </button>
     </form>
   );
 }

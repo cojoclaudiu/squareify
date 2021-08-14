@@ -1,16 +1,26 @@
 .productContainer {
-  display: flex;
-  flex-direction: column;
   justify-self: center;
+  display: grid;
+  grid-template-rows: auto;
+  gap: 1rem 0;
   width: var(--appWidth);
   max-width: var(--appWidth);
   min-width: var(--square);
 }
 
 .productName {
-  height: 10rem;
+  font-size: var(--productTitle);
+  height: 5rem;
 }
 
 .productDescription {
-  height: 20rem;
+  resize: none;
+  height: var(--heroSize);
+}
+.updateButton {
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: var(--blue);
+  padding: 1rem 0;
+  color: white;
 }
