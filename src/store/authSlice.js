@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = { isAuth: false };
+const initialState = { isAuth: false, user: null, error: '' };
 
 const authSlice = createSlice({
   name: 'auth',

@@ -10,9 +10,9 @@ import styles from './HeaderMenu.module.css';
 export default function HeaderMenu() {
   const router = useRouter();
   const dispatch = useDispatch();
-  const itemsInCart = useSelector((state) => state.cart.totalCartItems);
+  const itemsInCart = useSelector((state) => state?.cart?.totalCartItems ?? 0);
 
-  const wishListItems = useSelector((state) => state.wishlist.totalWishes);
+  const wishListItems = useSelector((state) => state?.wishlist?.totalWishes ?? 0);
 
   const toggleCartHandler = (e) => {
     e.preventDefault();
