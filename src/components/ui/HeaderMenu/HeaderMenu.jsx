@@ -1,31 +1,33 @@
 import { useRouter } from 'next/router';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { GiShoppingCart } from 'react-icons/gi';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { IoPersonCircleOutline } from 'react-icons/io5';
 import Notification from 'components/Notification/Notification';
-import { toggleCart } from '../../../store/showCartSlice';
 import styles from './HeaderMenu.module.css';
 
 export default function HeaderMenu() {
   const router = useRouter();
-  const dispatch = useDispatch();
-  const itemsInCart = useSelector((state) => state.cart.totalCartItems);
+  const itemsInCart = useSelector((state) => state.cart.totalCartItems ?? 0);
 
-  const wishListItems = useSelector((state) => state.wishlist.totalWishes);
+  const wishListItems = useSelector((state) => state.wishlist.totalWishes ?? 0);
 
   const toggleCartHandler = (e) => {
     e.preventDefault();
-    dispatch(toggleCart());
     router.push('/cart');
+  };
+
+  const handleAccount = (e) => {
+    e.preventDefault();
+    router.push('/login');
   };
 
   return (
     <div className={styles.headerMenu}>
-      <div className={styles.account}>
+      <button onClick={handleAccount} type="button" className={styles.account}>
         <IoPersonCircleOutline className={styles.headerIcon} />
         <div>Account</div>
-      </div>
+      </button>
 
       <div className={styles.wishlist}>
         <AiOutlineHeart className={styles.headerIcon} />
