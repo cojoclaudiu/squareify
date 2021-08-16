@@ -1,15 +1,15 @@
 import { combineReducers } from '@reduxjs/toolkit';
 
 import wishlist from './wishlistSlice';
-import auth from './authSlice';
-import showCart from './showCartSlice';
 import cart from './cartSlice';
+import apiSlice from './apiSlice';
+import userConfig from './userSlice';
 
 const rootReducer = combineReducers({
   wishlist,
-  auth,
-  showCart,
   cart,
+  userConfig,
+  [apiSlice.reducerPath]: apiSlice.reducer,
 });
 
 export default rootReducer;

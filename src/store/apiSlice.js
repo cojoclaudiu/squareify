@@ -1,23 +1,55 @@
 import { createApi, fakeBaseQuery } from '@reduxjs/toolkit/query/react';
-import firebase from 'firebase/app';
+import { getAuth, signInWithPopup, signOut, GoogleAuthProvider } from 'firebase/auth';
 
 const apiSlice = createApi({
   reducerPath: 'apiSlice',
   baseQuery: fakeBaseQuery(),
+
   endpoints: (builder) => ({
-    loginWithGoogle: builder.query({
-      async queryFn({ username, password }) {
+    loginWithGoogle: builder.mutation({
+      async queryFn() {
+        const provider = new GoogleAuthProvider();
+        const auth = getAuth();
+
         try {
-          const data = firebase.someLoginFunction(username, password);
-          return { data };
-        } catch (error) {
-          return { error };
+          const result = await signInWithPopup(auth, provider);
+          const { user } = result;
+          return {
+            data: {
+              isLoggedIn: true,
+              name: user.displayName,
+              email: user.email,
+              avatar: user.photoURL,
+            },
+          };
+        } catch (err) {
+          return {
+            error: err.message,
+          };
+        }
+      },
+    }),
+
+    logout: builder.mutation({
+      async queryFn() {
+        const auth = getAuth();
+
+        try {
+          await signOut(auth);
+
+          return {
+            data: { isLoggedOut: true },
+          };
+        } catch (err) {
+          return {
+            error: 'Logout: something went wrong!',
+          };
         }
       },
     }),
   }),
 });
 
-export const { loginWithGoogle } = apiSlice;
+export const { useLoginWithGoogleMutation, useLogoutMutation } = apiSlice;
 
 export default apiSlice;
