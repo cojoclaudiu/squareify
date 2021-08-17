@@ -1,5 +1,5 @@
 /* eslint-disable react/no-children-prop */
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { addToWishlist } from 'store/wishlistSlice';
@@ -8,11 +8,13 @@ import useData from 'hooks/useData';
 import priceFormat from 'utils/priceFormat';
 import ReactMarkdown from 'react-markdown';
 import ActionProductButton from 'components/Buttons/ActionProductButton/ActionProductButton';
+import { selectCurrentUserLogin } from 'store/userSlice';
 import AddToButton from '../../Buttons/AddToButton/AddToButton';
 
 import styles from './ProductPage.module.css';
 
 export default function ItemPage() {
+  const isLogged = useSelector(selectCurrentUserLogin);
   const router = useRouter();
   const { i: id } = router.query;
   const { items } = useData();
@@ -66,8 +68,7 @@ export default function ItemPage() {
         <>
           <article className={styles.productMain}>
             <h1 className={styles.productTitle}>{itemData.name}</h1>
-            <ActionProductButton name="Edit" action={editProductHandler(itemData)} />
-
+            {isLogged && <ActionProductButton name="Edit" action={editProductHandler(itemData)} />}
             <div className={styles.productGallery}>
               <div className={styles.mainImage}>
                 <Image width={595} height={595} src={itemData.image} objectFit="contain" />
