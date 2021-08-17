@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
 import useData from 'hooks/useData';
 import { useRouter } from 'next/router';
+import { useSelector } from 'react-redux';
+import { selectCurrentUserLogin } from 'store/userSlice';
 import axios from 'axios';
 import urlProduct from 'utils/urlProduct';
 import styles from './EditProductForm.module.css';
 
 export default function EditProductForm() {
+  const isLogged = useSelector(selectCurrentUserLogin);
   const [editedItem, setEditedItem] = useState({ name: '', description: '' });
   const [isLoading, setIsLoading] = useState(false);
 
@@ -37,26 +40,28 @@ export default function EditProductForm() {
   }, [itemData]);
 
   return (
-    <form className={styles.productContainer} onSubmit={onUpdateHandler}>
-      <input
-        className={styles.productName}
-        type="text"
-        value={editedItem.name}
-        onChange={(e) => setEditedItem((prev) => ({ ...prev, name: e.target.value }))}
-        name="productName"
-      />
-      <textarea
-        id="productDescription"
-        className={styles.productDescription}
-        type="text"
-        value={editedItem.description}
-        onChange={(e) => setEditedItem((prev) => ({ ...prev, description: e.target.value }))}
-        name="productDescription"
-      />
+    isLogged && (
+      <form className={styles.productContainer} onSubmit={onUpdateHandler}>
+        <input
+          className={styles.productName}
+          type="text"
+          value={editedItem.name}
+          onChange={(e) => setEditedItem((prev) => ({ ...prev, name: e.target.value }))}
+          name="productName"
+        />
+        <textarea
+          id="productDescription"
+          className={styles.productDescription}
+          type="text"
+          value={editedItem.description}
+          onChange={(e) => setEditedItem((prev) => ({ ...prev, description: e.target.value }))}
+          name="productDescription"
+        />
 
-      <button className={styles.updateButton} type="submit">
-        {isLoading ? 'Loading' : 'Update Product'}
-      </button>
-    </form>
+        <button className={styles.updateButton} type="submit">
+          {isLoading ? 'Loading' : 'Update Product'}
+        </button>
+      </form>
+    )
   );
 }

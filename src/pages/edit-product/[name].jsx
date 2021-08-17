@@ -1,5 +1,10 @@
 import EditProductForm from 'components/EditProductForm/EditProductForm';
+import WithAuth from 'components/WithAuth/WithAuth';
 
 export default function EditProductPage() {
-  return <EditProductForm />;
+  return (
+    <WithAuth>
+      <EditProductForm />
+    </WithAuth>
+  );
 }
