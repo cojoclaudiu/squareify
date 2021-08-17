@@ -27,7 +27,7 @@
   /* Colors Homepage */
   --navColor: var(--mainBg);
   --pinkLove: #e94c89;
-  --redPrice: #e10411;
+  --flamenco: #e10411;
 }
 
 @media only screen and (max-width: 1240px) {

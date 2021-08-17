@@ -9,10 +9,9 @@ import {
   selectCurrentUserLogin,
 } from 'store/userSlice';
 
-// loginResult, logoutResult to be added if you want to check if is loading, fullfield, rejected etc
 /**
- *  const [loginMutation,] = useLoginWithGoogleMutation();
- *  const [logoutMutation, logoutResult] = useLogoutMutation();
+ * *loginResult, logoutResult to be added if you want to check if is loading, fullfield, rejected etc
+ *  *const [logoutMutation, logoutResult] = useLogoutMutation();
  */
 
 export default function Login() {

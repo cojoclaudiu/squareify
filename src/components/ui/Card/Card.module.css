@@ -3,7 +3,7 @@
   grid-template-columns: repeat(2, 1fr);
   justify-self: center;
   gap: var(--gap);
-  height: var(--squareBox);
+  height: calc(var(--square) / 2);
   width: var(--appWidth);
   margin: var(--gap) 0;
 }
