@@ -44,6 +44,7 @@
   position: absolute;
   border-radius: 4px;
   width: 25%;
+  transition: all 0.35s;
 }
 
 .searchButton:hover {

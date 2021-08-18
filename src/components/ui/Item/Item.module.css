@@ -23,6 +23,7 @@
 }
 
 .itemTitle {
+  font-size: 1.3rem;
   grid-area: 7/1/8/8;
   width: 100%;
   white-space: nowrap;
@@ -38,6 +39,7 @@
 
 .itemPrice {
   grid-area: 1/5/2/8;
+  font-size: 1.4rem;
   width: max-content;
   padding: 5px var(--gap);
   align-self: baseline;
