@@ -1,5 +1,9 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/52509e8a-36d0-4831-8b96-34440d59815e/deploy-status)](https://app.netlify.com/sites/nextify/deploys)
 
+![Screen Shot 2022-04-03 at 21 11 55](https://user-images.githubusercontent.com/62800983/161446605-9eaa0e17-15eb-41cc-89f3-6c6f0536a161.png)
+
+<img width="1208" alt="Screenshot 2022-04-03 at 21 14 13" src="https://user-images.githubusercontent.com/62800983/161446659-e15127cd-d77e-4696-8075-2f4a599b8dc7.png">
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -34,3 +38,5 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
